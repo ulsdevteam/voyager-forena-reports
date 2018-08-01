@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>LCSU Turnaround Times</title>
+<meta content="Raw dataset indicating the various stages of a callslip request from the LCSU." name="description"/>
+<frx:category>Voyager - Assessment and External Reporting</frx:category>
+<frx:options/>
+<frx:parameters>
+
+  <frx:parm id="begin_date"/>
+
+  <frx:parm id="end_date"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+</head>
+<body>
+<div id="lcsu-turnaround-times_block" class="FrxTable" frx:block="voyager-statistics/lcsu-turnaround-times">
+    <table>
+      <thead>
+        <tr>
+          <th>call slip id</th>
+          <th>status</th>
+          <th>date requested</th>
+          <th>date processed</th>
+          <th>create date</th>
+          <th>available notice date</th>
+          <th>call slip pickup</th>
+          <th>location code</th></tr></thead>
+      <tbody>
+        <tr id="lcsu-turnaround-times" frx:foreach="*">
+          <td>{call_slip_id}</td>
+          <td>{status}</td>
+          <td>{date_requested}</td>
+          <td>{date_processed}</td>
+          <td>{create_date}</td>
+          <td>{available_notice_date}</td>
+          <td>{call_slip_pickup}</td>
+          <td>{location_code}</td></tr></tbody></table></div></body>
+</html>
