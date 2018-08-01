@@ -20,7 +20,6 @@
   <frx:menu/><style/><frx:cache/><frx:description/><meta content="This report displays a list of bib numbers for unsuppressed records associated with a specific operator ID (vendor or individual). Used to identify bib. records for batch actions such as deletion." name="description"/></head>
   <body>
 <p>This report displays a list of bib numbers for unsuppressed records associated with a specific operator ID (vendor or individual). Used to identify bib. records for batch actions such as deletion.</p>
-<p>In Production 10/10/2017. Description defined 10/10/2017</p>
   <div id="bibs-from-operator-id_block" class="FrxTable" frx:block="voyager-prod/bibs-from-operator-id">
     <table>
       <thead>

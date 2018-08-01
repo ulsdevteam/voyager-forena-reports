@@ -13,6 +13,8 @@
   <frx:field id="suppress_in_opac"/>
   <frx:field id="mfhd_count"/>
   
+
+
 </frx:fields>
     <frx:parameters/>
     <frx:docgen>
@@ -22,26 +24,26 @@
   <frx:doc type="xls"/>
 </frx:docgen>
   <frx:menu type="normal-item"/><style>table {&#13;
-        font-family: verdana,arial,sans-serif;&#13;
-        font-size:11px;&#13;
-        color:#333333;&#13;
-        border-width: 1px;&#13;
-        border-color: #666666;&#13;
-        border-collapse: collapse;&#13;
+	font-family: verdana,arial,sans-serif;&#13;
+	font-size:11px;&#13;
+	color:#333333;&#13;
+	border-width: 1px;&#13;
+	border-color: #666666;&#13;
+	border-collapse: collapse;&#13;
 }&#13;
 th {&#13;
-        border-width: 1px;&#13;
-        padding: 8px;&#13;
-        border-style: solid;&#13;
-        border-color: #666666;&#13;
-        background-color: #cecece;&#13;
+	border-width: 1px;&#13;
+	padding: 8px;&#13;
+	border-style: solid;&#13;
+	border-color: #666666;&#13;
+	background-color: #cecece;&#13;
 }&#13;
 td {&#13;
-        border-width: 1px;&#13;
-        padding: 8px;&#13;
-        border-style: solid;&#13;
-        border-color: #666666;&#13;
-        background-color: #ffffff;&#13;
+	border-width: 1px;&#13;
+	padding: 8px;&#13;
+	border-style: solid;&#13;
+	border-color: #666666;&#13;
+	background-color: #ffffff;&#13;
 }&#13;
 &#13;
 tr.odd td {&#13;
@@ -52,7 +54,7 @@ tr.even td {&#13;
 }</style><frx:description/><meta content="A list of all Voyager Production locations with associated OPAC display, suppressed status, and MFHD count." name="description"/></head>
   <body>
  <p>A list of all Voyager Production locations with associated OPAC display, suppressed status, and MFHD count.</p> 
-<p>In Production 10/10/2017. Description defined 10/10/2017</p>
+
 
   <div id="voyager-locations_block" class="FrxTable" frx:block="voyager-prod/voyager-locations">
     <table>

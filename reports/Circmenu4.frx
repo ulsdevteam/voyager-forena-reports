@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Details where patron balance is equal to or greater than an amount, by happening location.</title>
+<frx:category>Voyager - Circulation</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="circ_loc" label="Circulation Location" require="1" desc="Select Circulation Location Desired." data_source="voyager-prod/lookup-voyager-circ-locations" type="select"/>
+  <frx:parm id="dollaramount" label="Dollar amount equal to or greater than" require="1" desc="Please enter Starting Dollar Amount in the following format.. Dollars and cents: e.g. 0.00" type="textfield"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+</head>
+<body>
+<div id="circmenu4_block" class="FrxTable" frx:block="voyager-prod/circmenu4">
+    <table>
+      <thead>
+        <tr>
+          <th>patron id</th>
+          <th>Circulation Location</th>
+          <th>last name</th>
+          <th>first name</th>
+          <th>middle name</th>
+          <th>total voyager</th>
+          <th>Total Fine/Fee Count in Voyager</th>
+          <th>Balance Due</th>
+          <th>Fine Fee Count</th></tr></thead>
+      <tbody>
+        <tr id="circmenu4" frx:foreach="*">
+          <td>{patron_id}</td>
+          <td>{location_code}</td>
+          <td>{last_name}</td>
+          <td>{first_name}</td>
+          <td>{middle_name}</td>
+          <td>{total_voyager}</td>
+          <td>{test}</td>
+          <td>{total_hillci}</td>
+          <td>{test2}</td></tr></tbody></table></div></body>
+</html>

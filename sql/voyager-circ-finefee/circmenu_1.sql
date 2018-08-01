@@ -18,7 +18,7 @@ select to_char(fftr.trans_date, 'YYYY/MM/DD HH12:MI AM') "TransDate",
                   pittdb.item it,
                   pittdb.location lo,
                   pittdb.item_barcode ib,
-                  pittdb.patron pa
+                  pittdb.patron pa           
            where fftr.trans_location = :circ_location
            and   fftr.trans_date between :transdate_start and :transdate_end
            and   fftr.fine_fee_id = ff.fine_fee_id

@@ -16,11 +16,11 @@
   <frx:doc type="html"/>
   <frx:doc type="xls"/>
 </frx:docgen>
-  <frx:menu/><style/><frx:cache/><frx:description/><meta content="Report showing any fines and fees posted as ârorâ all libraries for specified date range." name="description"/></head>
+  <frx:menu/><style/><frx:cache/><frx:description/><meta content="Report showing any fines and fees posted as “Error” at all libraries for specified date range." name="description"/></head>
   <body>
 
   <div id="voy-fine-fee-reason-error-circ-happ-loc_block" class="FrxTable" frx:block="voyager-circ-finefee/voy-fine-fee-reason-error-circ-happ-loc">
-<p>Report showing any fines and fees posted as ârorâ all libraries for specified date range.</p>
+<p>Report showing any fines and fees posted as “Error” at all libraries for specified date range.</p>
     <table>
       <thead>
         <tr>

@@ -1,0 +1,46 @@
+--ACCESS=access content
+select 
+                cpg.circ_group_name,
+                cpm.circ_group_id,
+                pg.patron_group_code,
+                ity.item_type_code,
+                cpm.charge_renew,
+                cpm.place_recall,
+                cpm.place_hold,
+                cpm.place_call_slip,
+                cpm.loan_period,
+                cpm.loan_interval,
+                cpm.renewal_period,
+                cpm.renewal_interval,
+                cpm.renewal_count,
+                cpm.fine_interval,
+                cpm.fine_rate,
+                (case when cpm.max_fine > 0 then cpm.max_fine / 100 else 0 end) "Max Fine",
+                (case when cpm.max_recall_fine > 0 then cpm.max_recall_fine /100 else 0 end) "Max Recall",
+                cpm.recall_min_loan,
+                cpm.recall_fine_interval,
+                cpm.recall_fine_rate,
+                cpm.grace_period,
+                (case when cpm.renew_from_due_date = 'Y' then 'Orig' else 'Renew' end) "Renew Date",
+		cpm.recall_notice_interval,
+                cpm.courtesy_notice_min_loan,
+                cpm.first_overdue_interval,
+                cpm.lost_notice_interval,
+                cpm.other_notice_interval,
+                cpm.other_notice_count,
+                cpm.recall_grace_period,
+                cpm.recall_notice_count,
+                cpm.hold_shelf_life,
+                cpm.hold_shelf_life_interval,
+                cpm.charge_limit_apply,
+                cpm.charge_limit
+         from   pittdb.circ_policy_matrix cpm,
+                pittdb.circ_policy_group cpg,
+                pittdb.patron_group pg,
+                pittdb.item_type ity
+         where  cpm.circ_group_id = cpg.circ_group_id
+         and    cpm.patron_group_id = pg.patron_group_id(+)
+         and    cpm.item_type_id = ity.item_type_id(+)
+         order by cpg.circ_group_name,
+                  pg.patron_group_code,
+                  ity.item_type_code

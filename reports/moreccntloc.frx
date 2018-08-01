@@ -18,13 +18,13 @@
 <frx:menu/>
 <frx:cache/>
 <style/>
-<frx:description/><meta content="In this job, the bib count is larger than the count of actual bib records as a bib rec was counted more than once if there are two or more mfhds with different locs linked to the bib" name="description"/></head>
+</head>
 <body>
 <div id="moreccntloc_bibs_block" class="FrxTable FrxTable" frx:block="voyager-circ-trans/moreccntloc_bibs">In this job, the bib count is larger than the count of actual bib records
-as a bib rec was counted more than once if there are two or more mfhds with different locs linked to the bib
-
-
-
+as a bib rec was counted more than once if there are two or more mfhds with different locs linked to the bib    
+    
+    
+    
     <table>
       <caption>BIBS Monthly Record Totals</caption>
       <thead>
@@ -36,10 +36,10 @@ as a bib rec was counted more than once if there are two or more mfhds with diff
         <tr id="moreccntloc_bibs" frx:foreach="*">
           <td>{bibs_total}</td>
           <td>{bibs_suppressed}</td>
-          <td>{bibs_unsuppressed}</td></tr></tbody></table></div><div id="moreccntloc_mfhds_block" class="FrxTable FrxTable" frx:block="voyager-circ-trans/moreccntloc_mfhds">
-
-
-
+          <td>{bibs_unsuppressed}</td></tr></tbody></table></div><div id="moreccntloc_mfhds_block" class="FrxTable FrxTable" frx:block="voyager-circ-trans/moreccntloc_mfhds">    
+    
+    
+    
     <table>
       <caption>MFHD Monthly Record Totals</caption>
       <thead>
@@ -51,8 +51,8 @@ as a bib rec was counted more than once if there are two or more mfhds with diff
         <tr id="moreccntloc_mfhds" frx:foreach="*">
           <td>{mfhds_total}</td>
           <td>{mfhds_suppressed}</td>
-          <td>{mfhds_unsuppressed}</td></tr></tbody></table></div><div id="moreccntloc_items_block" class="FrxTable FrxTable" frx:block="voyager-circ-trans/moreccntloc_items">
-
+          <td>{mfhds_unsuppressed}</td></tr></tbody></table></div><div id="moreccntloc_items_block" class="FrxTable FrxTable" frx:block="voyager-circ-trans/moreccntloc_items">    
+    
     <table>
       <caption>ITEMS Monthly Record Totals</caption>
       <thead>
@@ -62,11 +62,11 @@ as a bib rec was counted more than once if there are two or more mfhds with diff
       <tbody>
         <tr id="moreccntloc_items" frx:foreach="*">
           <td>{items_total}</td>
-          <td>{items_active_barcodes}</td></tr></tbody></table></div><div id="moreccntloc_locs_block" class="FrxTable FrxTable" frx:block="voyager-circ-trans/moreccntloc_locs">note that SSEA locs are in the total but not treated separately
-
-
-
-
+          <td>{items_active_barcodes}</td></tr></tbody></table></div><div id="moreccntloc_locs_block" class="FrxTable FrxTable" frx:block="voyager-circ-trans/moreccntloc_locs">note that SSEA locs are in the total but not treated separately     
+    
+    
+    
+    
     <table>
       <caption>LOCS Monthly Record Totals</caption>
       <thead>
@@ -90,8 +90,8 @@ as a bib rec was counted more than once if there are two or more mfhds with diff
           <td>{locs_hsls}</td>
           <td>{locs_law}</td>
           <td>{locs_ssea}</td>
-          <td>{locs_uls}</td></tr></tbody></table></div><div id="moreccntloc_happlocs_block" class="FrxTable FrxTable" frx:block="voyager-circ-trans/moreccntloc_happlocs">zzzzdeftAQ and lcbk are not included in the report
-
+          <td>{locs_uls}</td></tr></tbody></table></div><div id="moreccntloc_happlocs_block" class="FrxTable FrxTable" frx:block="voyager-circ-trans/moreccntloc_happlocs">zzzzdeftAQ and lcbk are not included in the report    
+    
     <table>
       <caption>LOCS Monthly Happening Locations</caption>
       <thead>

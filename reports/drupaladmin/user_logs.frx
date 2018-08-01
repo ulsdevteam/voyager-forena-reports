@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Logs for User</title>
+<frx:category>Drupal Administration</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="name" label="Name" require="1" desc="This is a name" type="textfield" class="BigData">N/A</frx:parm>
+  <frx:parm id="rid"/>
+
+</frx:parameters>
+<frx:fields>
+  <frx:field id="name" link="" format="" format-string="" target="">Anonymous</frx:field>
+  <frx:field id="type" link="" format="" format-string="" target=""/>
+  <frx:field id="message" link="" format="drupal_translation" format-string="variables" target=""/>
+  <frx:field id="timestamp" link="" format="drupal_date_format" format-string="small" target=""/>
+  <frx:field id="details" link="admin/reports/event/{wid}" format="" format-string="" target="">Details</frx:field>
+</frx:fields>
+<frx:docgen/>
+<frx:description/><meta content="" name="description"/><style/></head>
+<body>
+  
+  <div id="role_permissions_block" class="FrxTable" frx:block="drupal/role_permissions">    
+    
+    
+    <table>
+      <thead>
+        <tr>
+          <th>rid</th>
+          <th>name</th></tr></thead>
+      <tbody>
+        <tr id="role_permissions" frx:foreach="*">
+          <td>{rid}</td>
+          <td>{name}</td></tr></tbody></table></div><div id="users_in_logs_block" class="FrxTable" frx:block="drupal/users_in_logs">    
+    
+    <table>
+      <thead>
+        <tr>
+          <th>rid</th>
+          <th>name</th></tr></thead>
+      <tbody>
+        <tr id="users_in_logs" frx:foreach="*">
+          <td>{rid}</td>
+          <td>{name}</td></tr></tbody></table></div><div id="role_permissions_block" class="FrxTable" frx:block="drupal/role_permissions">    
+    <table>
+      <thead>
+        <tr>
+          <th>rid</th>
+          <th>name</th></tr></thead>
+      <tbody>
+        <tr id="role_permissions" frx:foreach="*">
+          <td>{rid}</td>
+          <td>{name}</td></tr></tbody></table></div><div id="roles_block" class="FrxTable" frx:block="drupal/roles">
+    <table>
+      <thead>
+        <tr>
+          <th>rid</th>
+          <th>name</th></tr></thead>
+      <tbody>
+        <tr id="roles" frx:foreach="*">
+          <td>{rid}</td>
+          <td>{name}</td></tr></tbody></table></div><table frx:block="drupal/user_logs">
+    <thead>
+      <tr>
+        <th width="200">Type</th>
+        <th width="200">Message</th>
+        <th>Timestamp</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr frx:foreach="*">
+        <td>{type}</td>
+        <td>{message}</td>
+        <td>{timestamp}</td>
+        <td>{details}</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

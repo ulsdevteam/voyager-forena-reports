@@ -20,7 +20,7 @@
 <style/>
 <frx:description/></head>
 <body>
-<div id="fpc-rollover-rules_block" class="FrxTable" frx:block="voyager-acquisitions/fpc-rollover-rules">
+<div id="fpc-rollover-rules_block" class="FrxTable" frx:block="voyager-statistics/fpc-rollover-rules">
 <p>FPC Rollover Rules/Fiscal Periods/Ledgers</p>
     <table>
       <thead>

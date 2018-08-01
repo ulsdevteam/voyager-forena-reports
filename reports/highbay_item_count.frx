@@ -16,7 +16,7 @@
 <frx:menu/>
 <frx:cache/>
 <style/>
-<frx:description/><meta content="The Total below is a count of all items with a spine label in the format of 'R-M-S-T' including suppressed items.&#13;&#10;This by the definition is a count of all items in the High Bay. If an item has a spine label that matches the 'R-M-S-T' that is in another physical location it will be counted as being in the High Bay." name="description"/></head>
+</head>
 <body>
 
 The Total below is a count of all items with a spine label in the format of 'R-M-S-T' including suppressed items.<br/>

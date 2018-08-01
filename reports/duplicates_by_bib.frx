@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Duplicate Copies within Locations</title>
+<meta content="Lists duplicate holdings of identical materials across selected locations." name="description"/>
+<frx:category>Voyager - Assessment and External Reporting</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="location_list" label="Locations" data_source="voyager-prod/lookups/locations" type="multiselect" class="huge-selector"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache duration="+30 min"/>
+<style/>
+</head>
+<body>
+<div id="duplicates-by-bib_block" class="FrxTable" frx:block="voyager-prod/duplicates-by-bib">Duplicate holdings are presented in BIB_ID order.
+    <table>
+      <thead>
+        <tr>
+          <th>item location</th>
+          <th>normalized call no</th>
+          <th>display call no</th>
+          <th>item enum</th>
+          <th>chron</th>
+          <th>year</th>
+          <th>copy number</th>
+          <th>item barcode</th>
+          <th>begin pub date</th>
+          <th>title brief</th>
+          <th>author</th>
+          <th>edition</th>
+          <th>historical charges</th>
+          <th>historical browses</th>
+          <th>last charged</th>
+          <th>item status desc</th>
+          <th>item status date</th>
+          <th>mfhd location</th>
+          <th>item id</th>
+          <th>mfhd id</th>
+          <th>bib id</th></tr></thead>
+      <tbody>
+        <tr id="duplicates-by-bib" frx:foreach="*">
+          <td>{item_location}</td>
+          <td>{normalized_call_no}</td>
+          <td>{display_call_no}</td>
+          <td>{item_enum}</td>
+          <td>{chron}</td>
+          <td>{year}</td>
+          <td>{copy_number}</td>
+          <td>{item_barcode}</td>
+          <td>{begin_pub_date}</td>
+          <td>{title_brief}</td>
+          <td>{author}</td>
+          <td>{edition}</td>
+          <td>{historical_charges}</td>
+          <td>{historical_browses}</td>
+          <td>{last_charged}</td>
+          <td>{item_status_desc}</td>
+          <td>{item_status_date}</td>
+          <td>{mfhd_location}</td>
+          <td>{item_id}</td>
+          <td>{mfhd_id}</td>
+          <td>{bib_id}</td></tr></tbody></table></div></body>
+</html>

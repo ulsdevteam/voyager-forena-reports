@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Purchase Order by Fund</title>
+<meta type="description" content=""/>
+<frx:category>Voyager - Cataloging</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="start_date" require="1" type="date_popup"/>
+  <frx:parm id="end_date" require="1" type="date_popup"/>
+  <frx:parm id="fund_ledger_id" require="1" data_source="voyager-prod/lookup-voyager-ledger_name" type="select"/>
+  <frx:parm id="po_type_desc" require="1" data_source="voyager-prod/lookup-voyager-po_type_desc" type="select"/>
+  <frx:parm id="po_status_desc" require="1" data_source="voyager-prod/lookup-voyager-po_status_desc" type="select"/>
+  <frx:parm id="location_code" require="1" data_source="voyager-prod/lookup-voyager-locations" type="select"/>
+  <frx:parm id="ledger_name" require="1" data_source="voyager-prod/lookup-voyager-ledger_name" type="select"/>
+  <frx:parm id="line_item_type_desc" require="1" data_source="voyager-prod/lookup-voyager-line_item_type_desc" type="select"/>
+  <frx:parm id="language" require="1" data_source="voyager-prod/lookup-voyager-language" type="select"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+</head>
+<body>
+<div id="acqmenu8_block" class="FrxTable" frx:block="voyager-prod/acqmenu8">
+    <table>
+      <thead>
+        <tr>
+          <th>po number</th>
+          <th>vendor code</th>
+          <th>vendor name</th>
+          <th>po type desc</th>
+          <th>po status desc</th>
+          <th>po status date</th>
+          <th>location code</th>
+          <th>po approve date</th>
+          <th>line item count</th>
+          <th>p.total/100</th>
+          <th>prepay conversion rate</th>
+          <th>ledger name</th>
+          <th>line item type desc</th>
+          <th>ii.line price/100</th>
+          <th>line item status desc</th>
+          <th>status date</th>
+          <th>invoice number</th>
+          <th>invoice status date</th>
+          <th>po status</th>
+          <th>language</th>
+          <th>bib id</th>
+          <th>mfhd id</th>
+          <th>isbn</th>
+          <th>issn</th>
+          <th>title</th>
+          <th>author</th>
+          <th>publisher</th></tr></thead>
+      <tbody>
+        <tr id="acqmenu8" frx:foreach="*">
+          <td>{po_number}</td>
+          <td>{vendor_code}</td>
+          <td>{vendor_name}</td>
+          <td>{po_type_desc}</td>
+          <td>{po_status_desc}</td>
+          <td>{po_status_date}</td>
+          <td>{location_code}</td>
+          <td>{po_approve_date}</td>
+          <td>{line_item_count}</td>
+          <td>{p.total/100}</td>
+          <td>{prepay_conversion_rate}</td>
+          <td>{ledger_name}</td>
+          <td>{line_item_type_desc}</td>
+          <td>{ii.line_price/100}</td>
+          <td>{line_item_status_desc}</td>
+          <td>{status_date}</td>
+          <td>{invoice_number}</td>
+          <td>{invoice_status_date}</td>
+          <td>{po status}</td>
+          <td>{language}</td>
+          <td>{bib_id}</td>
+          <td>{mfhd_id}</td>
+          <td>{isbn}</td>
+          <td>{issn}</td>
+          <td>{title}</td>
+          <td>{author}</td>
+          <td>{publisher}</td></tr></tbody></table></div></body>
+</html>

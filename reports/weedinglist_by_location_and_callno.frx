@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Weeding List</title>
+<meta content="A shelflist filtered against historic circulation and duplicate holdings." name="description"/>
+<frx:category>Voyager - General Reports</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="these_duplicates" label="Check for Duplicates Within the Locations" type="checkbox"/>
+  <frx:parm id="location_list" label="Locations" require="1" data_source="voyager-prod/lookups/locations" data_field="location_id" label_field="location_name" type="multiselect" class="huge-selector"/>
+  <frx:parm id="include_missing_callno" label="Include Items without Call Numbers?" type="checkbox">N</frx:parm>
+  <frx:parm id="end_call" label="End Call Number"/>
+  <frx:parm id="start_call" label="Start Call Number"/>
+  <frx:parm id="duplicate_list" label="Check for Duplicates Across These Locations" data_source="voyager-prod/lookups/locations" data_field="location_id" label_field="location_name" type="multiselect" class="huge-selector"/>
+  <frx:parm id="other_duplicates" label="Check for Duplicates Across Other Locations" data_source="voyager-prod/lookup-voyager-locations" data_field="location_id" label_field="location_name" type="multiselect" class="huge-selector"/>
+  <frx:parm id="weeding" label="Weed" desc="Use default weeding criteria" type="checkbox"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache duration="+60 min"/>
+<style/>
+<frx:description/></head>
+<body>
+<div id="weedinglist-by-location-and-callno_block" class="FrxTable" frx:block="voyager-prod/weedinglist-by-location-and-callno"><p>
+
+</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Item Location</th>
+          <th>Normalized Call No</th>
+          <th>Display Call No</th>
+          <th>Item Enum</th>
+          <th>Chron</th>
+          <th>Year</th>
+          <th>Copy Number</th>
+          <th>Item Barcode</th>
+          <th>Begin Pub Date</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Edition</th>
+          <th>Historical Charges</th>
+          <th>Historical Browses</th>
+          <th>Last Charged</th>
+          <th>Item Status</th>
+          <th>Item Status Date</th>
+          <th>MFHD Location</th>
+          <th>Item ID</th>
+          <th>MFHD ID</th>
+          <th>BIB ID</th>
+          <th>Duplicate Here</th>
+          <th>Duplicate Elsewhere</th>
+          <th>Duplicate Other</th>
+          <th>Shelved With</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="weedinglist-by-location-and-callno" frx:foreach="*">
+          <td>{item_location}</td>
+          <td>{normalized_call_no}</td>
+          <td>{display_call_no}</td>
+          <td>{item_enum}</td>
+          <td>{chron}</td>
+          <td>{year}</td>
+          <td>{copy_number}</td>
+          <td>{item_barcode}</td>
+          <td>{begin_pub_date}</td>
+          <td>{title_brief}</td>
+          <td>{author}</td>
+          <td>{edition}</td>
+          <td>{historical_charges}</td>
+          <td>{historical_browses}</td>
+          <td>{last_charged}</td>
+          <td>{item_status_desc}</td>
+          <td>{item_status_date}</td>
+          <td>{mfhd_location}</td>
+          <td>{item_id}</td>
+          <td>{mfhd_id}</td>
+          <td>{bib_id}</td>
+          <td>{duplicate_here}</td>
+          <td>{duplicate_there}</td>
+          <td>{duplicate_other}</td>
+          <td>{shelved_with}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

@@ -45,12 +45,10 @@ tr.odd td {&#13;
 &#13;
 tr.even td {&#13;
 }&#13;
-</style><frx:description/><meta content="A List of Cataloging Profiles, Operators and associated permission settings. These settings can be found in the Voyager System Administration client under Security - Cataloging Profiles.&#13;&#10;It can be used to determine the appropriate cataloging profile for a new Voyager operator." name="description"/></head>
+</style></head>
   <body>
   <div id="cataloging-profiles_block" class="FrxTable" frx:block="voyager-prod/cataloging-profiles">
-  <p>A List of Cataloging Profiles, Operators and associated permission settings. These settings can be found in the Voyager System Administration client under Security - Cataloging Profiles.
-It can be used to determine the appropriate cataloging profile for a new Voyager operator.</p>
-<p>In Production 10/10/2017. Description defined 10/10/2017</p>
+  <p>A List of Cataloging Profiles, Operators and associated permission settings.  These settings can be found in the Voyager System Administration client under Security - Cataloging Profiles.</p>
     <table>
       <thead>
         <tr>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Testing</title>
+    <frx:category>Voyager - Testing</frx:category>
+    <frx:options/>
+    <frx:fields>
+  <frx:field id="location_code"/>
+  <frx:field id="total_payment_amount" format="currency"/>
+  <frx:field id="e" link="e" format="e" format-string="e" target="e" rel="e" class="e" add-query="e">e</frx:field>
+</frx:fields>
+    <frx:parameters/>
+    <frx:docgen/>
+  <frx:menu type="normal-item"/><style/></head>
+  <body>
+
+  <div id="monthly-fine-fee-amounts" frx:block="voyager-prod/monthly-fine-fee-amounts">
+  <svg frx:label="{location_code}" frx:series_1="{total_payment_amount}" frx:type="BarGraph" frx:renderer="FrxSVGGraph" id="forena-2"/></div></body>
+</html>

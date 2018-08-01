@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Report count of trays used by tray size (HDS data)</title>
+<meta content="This is a snapshot of all defined (created) trays in the high bay.  It includes both used and unused shelves and trays." name="description"/>
+<frx:category/>
+<frx:options/>
+<frx:parameters>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/></head>
+<body>
+<div id="lcsu_count_of_trays_used_by_tray_size_A_block" class="FrxTable FrxTable" frx:block="voyager-prod/lcsu_count_of_trays_used_by_tray_size_A"><p>This is a snapshot of all defined (created) trays in the high bay.  It includes both used and unused shelves and trays.</p>
+    
+    
+    <table>
+      <thead>
+        <tr>
+          <th>tray size</th>
+          <th>number of shelves</th>
+          <th>number of trays</th></tr></thead>
+      <tbody>
+        <tr id="lcsu_count_of_trays_used_by_tray_size_A" frx:foreach="*">
+          <td>{tray size}</td>
+          <td>{number of shelves}</td>
+          <td>{number of trays}</td></tr></tbody></table></div><div id="lcsu_count_of_trays_used_by_tray_size_B_block" class="FrxTable FrxTable" frx:block="voyager-prod/lcsu_count_of_trays_used_by_tray_size_B"><p>This is a snapshot of all used trays in the high bay.  It includes only trays marked as used and does not include unused trays.</p>
+    
+    
+    <table>
+      <thead>
+        <tr>
+          <th>tray size</th>
+          <th>number of shelves</th>
+          <th>number of trays</th></tr></thead>
+      <tbody>
+        <tr id="lcsu_count_of_trays_used_by_tray_size_B" frx:foreach="*">
+          <td>{tray size}</td>
+          <td>{number of shelves}</td>
+          <td>{number of trays}</td></tr></tbody></table></div></body>
+</html>

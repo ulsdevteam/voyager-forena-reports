@@ -45,7 +45,7 @@ tr.odd td {&#13;
 &#13;
 tr.even td {&#13;
 }&#13;
-</style><frx:description/><meta content="A list of Master Profiles, Operators and associated permission settings. These settings can be found in the Voyager System Administration client under Security - Master Profiles." name="description"/></head>
+</style></head>
   <body>
   <div id="master-profiles_block" class="FrxTable" frx:block="voyager-prod/master-profiles">
     <p>A list of Master Profiles, Operators and associated permission settings.  These settings can be found in the Voyager System Administration client under Security - Master Profiles.</p>

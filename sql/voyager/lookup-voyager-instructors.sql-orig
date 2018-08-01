@@ -1,0 +1,7 @@
+--ACCESS=access content
+select distinct(i.instructor_id),
+                 i.last_name,
+                 i.first_name
+           from pittdb.instructor i
+	   order by i.last_name asc
+

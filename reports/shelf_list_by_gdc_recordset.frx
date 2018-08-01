@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Shelf List by GDC Recordset</title>
+<meta content="Lists bibliographic, holding, and item information for records identified by a Global Data Change record set." name="description"/>
+<frx:category>Voyager - General Reports</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="recordsetid" label="Record Set" require="1" data_source="voyager-prod/lookups/gdc-recordset-by-user" data_field="record_set_id" label_field="record_set_name" type="select"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/></head>
+<body>
+<div id="gdc-recordset-description_block" class="FrxTable" frx:block="voyager-prod/gdc-recordset-description">
+        <p id="gdc-recordset-description" frx:foreach="*">{description}</p>
+</div>
+<div id="shelflist-by-gdc-recordset_block" class="FrxTable" frx:block="voyager-prod/shelflist-by-gdc-recordset">
+    <table>
+      <thead>
+        <tr>
+          <th>Item location</th>
+          <th>Normalized Call Number</th>
+          <th>Display Call Number</th>
+          <th>Item Enum</th>
+          <th>Chron</th>
+          <th>Year</th>
+          <th>Copy Number</th>
+          <th>Item Barcode</th>
+          <th>Begin Pub Date</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Edition</th>
+          <th>Historical Charges</th>
+          <th>Historical Browses</th>
+          <th>Last Charged</th>
+          <th>Item Status</th>
+          <th>Item Status Date</th>
+          <th>MFHD Location</th>
+          <th>Item ID</th>
+          <th>MFHD ID</th>
+          <th>MFHD Suppressed</th>
+          <th>BIB ID</th>
+          <th>BIB Suppressed</th></tr></thead>
+      <tbody>
+        <tr id="shelflist-by-gdc-recordset" frx:foreach="*">
+          <td>{item_location}</td>
+          <td>{normalized_call_no}</td>
+          <td>{display_call_no}</td>
+          <td>{item_enum}</td>
+          <td>{chron}</td>
+          <td>{year}</td>
+          <td>{copy_number}</td>
+          <td>{item_barcode}</td>
+          <td>{begin_pub_date}</td>
+          <td>{title_brief}</td>
+          <td>{author}</td>
+          <td>{edition}</td>
+          <td>{historical_charges}</td>
+          <td>{historical_browses}</td>
+          <td>{last_charged}</td>
+          <td>{item_status_desc}</td>
+          <td>{item_status_date}</td>
+          <td>{mfhd_location}</td>
+          <td>{item_id}</td>
+          <td>{mfhd_id}</td>
+          <td>{mfhd_suppressed}</td>
+          <td>{bib_id}</td>
+          <td>{bib_suppressed}</td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

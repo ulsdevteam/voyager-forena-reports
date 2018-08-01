@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Equipment Inventory by Location (Broken)</title>
+    <frx:category>Voyager - General Reports</frx:category>
+    <frx:options/>
+    <frx:fields>
+  <frx:field id="bib_id"/>
+  <frx:field id="title"/>
+  <frx:field id="item_id"/>
+  <frx:field id="item_type_name"/>
+  <frx:field id="price" format="currency"/>
+  <frx:field id="pieces"/>
+  <frx:field id="historical_charges"/>
+  <frx:field id="historical_browses"/>
+  <frx:field id="e" link="e" format="e" format-string="e" target="e" rel="e" class="e" add-query="e">e</frx:field>
+</frx:fields>
+    <frx:parameters>
+  <frx:parm id="location_id" label="Location ID" require="1" data_source="voyager-circ-trans/lookup-voyager-locations-all" type="select"/>
+</frx:parameters>
+    <frx:docgen>
+  <frx:doc type="csv"/>
+  <frx:doc type="html"/>
+  <frx:doc type="doc"/>
+  <frx:doc type="xls"/>
+  <frx:doc type="xml"/>
+</frx:docgen>
+  <frx:menu/><style>table {&#13;
+                font-family: verdana,arial,sans-serif;&#13;
+                font-size:11px;&#13;
+                color:#333333;&#13;
+                border-width: 1px;&#13;
+                border-color: #666666;&#13;
+                border-collapse: collapse;&#13;
+}&#13;
+th {&#13;
+                border-width: 1px;&#13;
+                padding: 8px;&#13;
+                border-style: solid;&#13;
+                border-color: #666666;&#13;
+                background-color: #cecece;&#13;
+}&#13;
+td {&#13;
+                border-width: 1px;&#13;
+                padding: 8px;&#13;
+                border-style: solid;&#13;
+                border-color: #666666;&#13;
+                background-color: #ffffff;&#13;
+}&#13;
+&#13;
+tr.odd td {&#13;
+        background-color: #eeeeee;&#13;
+}&#13;
+&#13;
+tr.even td {&#13;
+}&#13;
+</style><frx:cache/></head>
+  <body>
+
+  <div id="equipment-inventory-by-location_block" class="FrxTable" frx:block="voyager-prod/equipment-inventory-by-location">
+    <table>
+      <thead>
+        <tr>
+          <th>Bib ID</th>
+          <th>Title</th>
+          <th>Item ID</th>
+          <th>Item Type</th>
+          <th>Price</th>
+          <th>Pieces</th>
+          <th>Historical Charges</th>
+          <th>Historical Browses</th></tr></thead>
+      <tbody>
+        <tr id="equipment-inventory-by-location" frx:foreach="*">
+          <td>{bib_id}</td>
+          <td>{title}</td>
+          <td>{item_id}</td>
+          <td>{item_type_name}</td>
+          <td>{price}</td>
+          <td>{pieces}</td>
+          <td>{historical_charges}</td>
+          <td>{historical_browses}</td></tr></tbody></table></div></body>
+</html>

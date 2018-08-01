@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Invoice Data by Fund - Fiscal Year</title>
+<meta content="Invoice Data by Fund - Fiscal Year" name="description"/>
+<frx:category>Voyager - Acquisitions</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="fund" require="1" data_source="voyager-prod/lookup-voyager-acq-funds" type="select"/>
+  <frx:parm id="fiscal" require="1" data_source="voyager-prod/lookup-fiscal-period" type="select"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+</head>
+<body>
+<div id="invoice_data_by_fund_year_block" class="FrxTable" frx:block="voyager-prod/invoice_data_by_fund_year">
+    <table>
+      <thead>
+        <tr>
+          <th>fiscal period name</th>
+          <th>ledger name</th>
+          <th>vendor code</th>
+          <th>vendor name</th>
+          <th>invoice number</th>
+          <th>amount</th>
+          <th>line price</th>
+          <th>prepay amount</th>
+          <th>invoice total</th>
+          <th>invoice status desc</th>
+          <th>invoice status date</th>
+          <th>voucher number</th>
+          <th>po number</th>
+          <th>total</th>
+          <th>isbn</th>
+          <th>issn</th>
+          <th>title</th>
+          <th>author</th>
+          <th>publisher</th>
+          <th>language</th></tr></thead>
+      <tbody>
+        <tr id="invoice_data_by_fund_year" frx:foreach="*">
+          <td>{fiscal_period_name}</td>
+          <td>{ledger_name}</td>
+          <td>{vendor_code}</td>
+          <td>{vendor_name}</td>
+          <td>{invoice_number}</td>
+          <td>{amount}</td>
+          <td>{line_price}</td>
+          <td>{prepay_amount}</td>
+          <td>{invoice_total}</td>
+          <td>{invoice_status_desc}</td>
+          <td>{invoice_status_date}</td>
+          <td>{voucher_number}</td>
+          <td>{po_number}</td>
+          <td>{total}</td>
+          <td>{isbn}</td>
+          <td>{issn}</td>
+          <td>{title}</td>
+          <td>{author}</td>
+          <td>{publisher}</td>
+          <td>{language}</td></tr></tbody></table></div></body>
+</html>

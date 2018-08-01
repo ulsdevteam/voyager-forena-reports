@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Unused Vendors</title>
+    <frx:category>Voyager - Acquisitions</frx:category>
+    <frx:options/>
+    <frx:fields/>
+    <frx:parameters/>
+    <frx:docgen>
+  <frx:doc type="html"/>
+  <frx:doc type="doc"/>
+  <frx:doc type="xls"/>
+</frx:docgen>
+  <frx:menu type="normal-item"/><style/></head>
+  <body>    <div id="unused-vendors_block" class="FrxTable" frx:block="voyager-prod/unused-vendors">     <table>       <thead>         <tr>           <th>Vendor</th>           <th>Vendor Code</th></tr></thead>       <tbody>         <tr id="unused-vendors" frx:foreach="*">           <td>{vendor_name}</td>           <td>{vendor_code}</td></tr></tbody></table></div></body>
+</html>

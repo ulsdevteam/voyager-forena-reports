@@ -21,3 +21,4 @@ select
                      l.location_code,
                      v.vendor_code,
                      inv.invoice_number
+

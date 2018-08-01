@@ -5,16 +5,11 @@
 <html xmlns:frx="urn:FrxReports">
 <head>
 <title>Record Counts by specified Date Range</title>
-<meta content="Voyager Record Counts by Owning Library Note: Remaining Semester at Sea records are suppressed but could not be deleted" name="description"/>
 <frx:category>Voyager - General Reports</frx:category>
 <frx:options/>
 <frx:parameters>
-  <frx:parm id="startdate"/>
-  <frx:parm id="enddate"/>
-
-
-
-
+  <frx:parm id="startdate" require="1" type="date_popup"/>
+  <frx:parm id="enddate" require="1" type="date_popup"/>
 </frx:parameters>
 <frx:docgen>
 </frx:docgen>
@@ -23,21 +18,24 @@
 <frx:menu/>
 <frx:cache/>
 <style/>
-</head>
+<frx:description/><meta content="Voyager Record Counts by Owning Library Note: Remaining Semester at Sea records are suppressed but could not be deleted" name="description"/></head>
 <body>
-<div id="moreccnt_bibs_block" class="FrxTable" frx:block="voyager-circ-trans/moreccnt_bibs">
+<div id="moreccnt_bibs_block" class="FrxTable FrxTable" frx:block="voyager-circ-trans/moreccnt_bibs">Voyager Record Counts by Owning Library
+Note:  Remaining Semester at Sea records are suppressed but could not be deleted
+
+    
     <table>
       <thead>
         <tr>
-          <th>rowtype</th>
-          <th>bradford</th>
-          <th>greensburg</th>
-          <th>hsls</th>
-          <th>johnstown</th>
-          <th>law</th>
-          <th>titusville</th>
-          <th>uls</th>
-          <th>semestersea</th></tr></thead>
+         <th/>
+          <th>Bradford</th>
+          <th>Greensburg</th>
+          <th>HSLS</th>
+          <th>Johnstown</th>
+          <th>Law</th>
+          <th>Titusville</th>
+          <th>ULS</th>
+          <th>Semester at Sea</th></tr></thead>
       <tbody>
         <tr id="moreccnt_bibs" frx:foreach="*">
           <td>{rowtype}</td>
@@ -52,14 +50,14 @@
     <table>
       <thead>
         <tr>
-          <th>bradford</th>
-          <th>greensburg</th>
-          <th>hsls</th>
-          <th>johnstown</th>
-          <th>law</th>
-          <th>titus</th>
-          <th>uls</th>
-          <th>ssea</th></tr></thead>
+          <th>Suppressed MFHD's Bradford</th>
+          <th>Suppressed MFHD's Greensburg</th>
+          <th>Suppressed MFHD's HSLS</th>
+          <th>Suppressed MFHD's Johnstown</th>
+          <th>Suppressed MFHD's Law</th>
+          <th>Suppressed MFHD's Titus</th>
+          <th>Suppressed MFHD's ULS</th>
+          <th>Suppressed MFHD's Semester at Sea</th></tr></thead>
       <tbody>
         <tr id="moreccnt_Suppmfhds" frx:foreach="*">
           <td>{bradford}</td>

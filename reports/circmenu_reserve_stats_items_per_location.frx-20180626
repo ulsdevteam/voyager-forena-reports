@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Circ Reserve Statistics</title>
+<frx:category>Voyager - Testing</frx:category>
+<frx:options/>
+<frx:parameters>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+</head>
+<body>
+<div id="circmenu-reserve-stats-list-items-per-location_block" class="FrxTable" frx:block="voyager-prod/circmenu-reserve-stats-list-items-per-location">
+    <table>
+      <thead>
+        <tr>
+          <th>item id</th>
+          <th>create location id</th>
+          <th>reserve list title</th>
+          <th>instructor last name</th>
+          <th>instructor first name</th>
+          <th>effective date</th>
+          <th>expire date</th>
+          <th>course name</th>
+          <th>course number</th>
+          <th>begin date</th>
+          <th>end date</th>
+          <th>title brief</th>
+          <th>item barcode</th>
+          <th>reserve list id</th></tr></thead>
+      <tbody>
+        <tr id="circmenu-reserve-stats-list-items-per-location" frx:foreach="*">
+          <td>{item_id}</td>
+          <td>{create_location_id}</td>
+          <td>{reserve_list_title}</td>
+          <td>{instructor_last_name}</td>
+          <td>{instructor_first_name}</td>
+          <td>{effective_date}</td>
+          <td>{expire_date}</td>
+          <td>{course_name}</td>
+          <td>{course_number}</td>
+          <td>{begin_date}</td>
+          <td>{end_date}</td>
+          <td>{title_brief}</td>
+          <td>{item_barcode}</td>
+          <td>{reserve_list_id}</td></tr></tbody></table></div></body>
+</html>

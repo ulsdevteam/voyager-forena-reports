@@ -1,11 +1,11 @@
 select
-                  case when cta.item_id = ib.item_id then 'Archived' else '*' end "Type of Trans", 
-                  ib.item_id "Item ID",
-                  ib.item_barcode "Item Barcode",
-                  ibs.barcode_status_desc "Item Barcode Status",
-                  cpg.circ_group_name "Circ Policy Group",
-                  ppg.patron_group_code "Patron Group",
-                  ity.item_type_code "Item Type",
+		   case when cta.item_id = ib.item_id then 'Archived' else '*' end "Type of Trans", 
+		   ib.item_id "Item ID",
+		   ib.item_barcode "Item Barcode",
+		   ibs.barcode_status_desc "Item Barcode Status",
+		   cpg.circ_group_name "Circ Policy Group",
+		   ppg.patron_group_code "Patron Group",
+		   ity.item_type_code "Item Type",
                    to_char(cta.charge_date, 'yyyy/mm/dd hh24:mi') ctachgdate,
                    lchg.location_code "charge Loc",
                    case cta.charge_type when 'N' then  'Normal' else ' ' end "Charge Type",
@@ -27,9 +27,9 @@ select
                    cta.patron_id "Patrin ID",
                    cta.patron_id_proxy "Patron ID Proxy",
                    case when to_char(cta.courtesy_notice_date) is null then '*' else to_char(cta.courtesy_notice_date) end "Courtesy Notice Date",
-                  cta.circ_transaction_id "Circ Tran ID",
-                  cta.due_date "Current Due Date",
-                  bt.title_brief "Title"
+		   cta.circ_transaction_id "Circ Tran ID",
+		   cta.due_date "Current Due Date",
+		   bt.title_brief "Title"
             from  pittdb.circ_trans_archive cta,
                   pittdb.location lchg,
                   pittdb.location ldis,
@@ -38,15 +38,15 @@ select
                   PITTDB.ITEM_BARCODE_STATUS ibs,
                   pittdb.item i,
                   pittdb.item_type ity,
-                 pittdb.circ_policy_matrix cpm,
+		  pittdb.circ_policy_matrix cpm,
                   pittdb.circ_policy_group cpg,
-                 pittdb.bib_text bt,
-                 pittdb.bib_item bi
+		  pittdb.bib_text bt,
+		  pittdb.bib_item bi
             where
-                   ib.item_barcode = :itembarcode
+	           ib.item_barcode = :itembarcode
             and    bi.item_id = ib.item_id
             and     cta.item_id = ib.item_id
-            and    bi.bib_id = bt.bib_id
+	    and    bi.bib_id = bt.bib_id
             and    cta.patron_group_id = ppg.patron_group_id
             and    cta.charge_location = lchg.location_id
             and    cta.discharge_location = ldis.location_id
@@ -54,9 +54,9 @@ select
             and    ib.barcode_status = ibs.barcode_status_type
             and    cta.item_id = i.item_id
             and    i.item_type_id = ity.item_type_id
-          and cpm.circ_policy_matrix_id = cta.circ_policy_matrix_id
+	  and cpm.circ_policy_matrix_id = cta.circ_policy_matrix_id
           and   cpm.circ_group_id = cpg.circ_group_id
-          and    cta.item_id = i.item_id
+	  and    cta.item_id = i.item_id
 union
 select
                    case when ct.item_id = ib.item_id then 'Active' else '*' end "Type of Trans",

@@ -7,10 +7,7 @@
     <title>Charges per Patron Group, Item Type and Perm Locations</title>
     <frx:category>Voyager - Circulation</frx:category>
     <frx:options/>
-    <frx:fields>
-  <frx:field id="totals"/>
-
-</frx:fields>
+    <frx:fields/>
     <frx:parameters>
   <frx:parm id="circ_loc" label="Circulation Location" require="1" data_source="voyager-prod/lookup-voyager-circ-locations" type="select"/>
   <frx:parm id="transdate_start" label="Starting Date" require="1" type="date_popup"/>

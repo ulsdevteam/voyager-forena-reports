@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Fine-Fee Laptop Balance Due</title>
+<meta content="Hillman Laptops/Mobile Devices with non-zero fine-fee balance due" name="description"/>
+<frx:category>Voyager - Circulation</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="location_code" require="1" data_source="voyager-prod/lookup-voyager-locations-PC" type="multiselect"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/></head>
+<body>
+<div id="monthly-circ-stats-laptops_block" class="FrxTable" frx:block="voyager-circ-finefee/monthly-circ-stats-laptops">
+    <table>
+      <thead>
+        <tr>
+          <th>Item Id</th>
+          <th>Location</th>
+          <th>Title</th>
+          <th>Serial (Enum)</th>
+          <th>Item Barcode</th>
+          <th>Patron Name</th>
+          <th>Patron Id</th>
+          <th>Amount Owed</th>
+          <th>Fine-Fee Type</th>
+          <th>Orig Charge Date</th>
+          <th>Due Date</th>
+          <th>Fine Fee Notice date</th>
+          <th>Fine-Fee Location</th>
+          <th>Fine-Fee Operator</th></tr></thead>
+      <tbody>
+        <tr id="monthly-circ-stats-laptops" frx:foreach="*">
+          <td>{item_id}</td>
+          <td>{location_code}</td>
+          <td>{title}</td>
+          <td>{item_enum}</td>
+          <td>{item_barcode}</td>
+          <td>{patronname}</td>
+          <td>{institution_id}</td>
+          <td>{amount owed}</td>
+          <td>{fine_fee_desc}</td>
+          <td>{orig_charge_date}</td>
+          <td>{due_date}</td>
+          <td>{fine_fee_notice_date}</td>
+          <td>{location_code}</td>
+          <td>{operator_id}</td></tr></tbody></table></div></body>
+</html>

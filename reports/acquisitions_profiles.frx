@@ -46,7 +46,7 @@ tr.odd td {&#13;
 tr.even td {&#13;
 }&#13;
 &#13;
-</style><frx:description/><meta content="A list of Acquisition/Serials Profiles, Operators and associated permission settings. These settings can be found in the Voyager System Administration client under Security - Acquisition/Serials Profiles." name="description"/></head>
+</style></head>
   <body>
   <div id="acquisitions-profiles_block" class="FrxTable" frx:block="voyager-prod/acquisitions-profiles">
   <p>A list of Acquisition/Serials Profiles, Operators and associated permission settings.  These settings can be found in the Voyager System Administration client under Security - Acquisition/Serials Profiles.</p>

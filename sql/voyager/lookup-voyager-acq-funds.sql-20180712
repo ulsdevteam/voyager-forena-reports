@@ -1,0 +1,3 @@
+--ACCESS=access content
+select distinct(fund_name), fund_id || ' ' || fund_name fundname from fund order by fund_name asc
+

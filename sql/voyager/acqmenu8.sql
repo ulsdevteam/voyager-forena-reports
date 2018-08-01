@@ -43,11 +43,14 @@ inner join VENDORORDER_VW on p.po_number = VENDORORDER_VW.po_number,
 	line_item_copy_status lc,
 	line_item_status ls,
 	bib_text bt,
-	line_item_funds lf
+	line_item_funds lf,
+        fund f
 where
 	p.po_status_date between :start_date and :end_date
 and
 	v.vendor_id = p.vendor_id
+and
+        :fund_ledger_id = lg.ledger_id
 and
 	po.po_type_desc = :po_type_desc 
 and

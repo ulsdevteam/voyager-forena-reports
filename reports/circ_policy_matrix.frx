@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Circ Policy Group Matrix</title>
+<meta content="Circ Policy Group Matrix" name="description"/>
+<frx:category>Voyager - Circulation</frx:category>
+<frx:options/>
+<frx:parameters>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+</head>
+<body>
+<div id="circpolmatrix_block" class="FrxTable" frx:block="voyager-circ-trans/circpolmatrix">
+    <table>
+      <thead>
+        <tr>
+          <th>circ group name</th>
+          <th>circ group id</th>
+          <th>patron group code</th>
+          <th>item type code</th>
+          <th>charge renew</th>
+          <th>place recall</th>
+          <th>place hold</th>
+          <th>place call slip</th>
+          <th>loan period</th>
+          <th>loan interval</th>
+          <th>renewal period</th>
+          <th>renewal interval</th>
+          <th>renewal count</th>
+          <th>fine interval</th>
+          <th>fine rate</th>
+          <th>max fine</th>
+          <th>max recall</th>
+          <th>recall min loan</th>
+          <th>recall fine interval</th>
+          <th>recall fine rate</th>
+          <th>grace period</th>
+          <th>renew date</th>
+          <th>recall notice interval</th>
+          <th>courtesy notice min loan</th>
+          <th>first overdue interval</th>
+          <th>lost notice interval</th>
+          <th>other notice interval</th>
+          <th>other notice count</th>
+          <th>recall grace period</th>
+          <th>recall notice count</th>
+          <th>hold shelf life</th>
+          <th>hold shelf life interval</th>
+          <th>charge limit apply</th>
+          <th>charge limit</th></tr></thead>
+      <tbody>
+        <tr id="circpolmatrix" frx:foreach="*">
+          <td>{circ_group_name}</td>
+          <td>{circ_group_id}</td>
+          <td>{patron_group_code}</td>
+          <td>{item_type_code}</td>
+          <td>{charge_renew}</td>
+          <td>{place_recall}</td>
+          <td>{place_hold}</td>
+          <td>{place_call_slip}</td>
+          <td>{loan_period}</td>
+          <td>{loan_interval}</td>
+          <td>{renewal_period}</td>
+          <td>{renewal_interval}</td>
+          <td>{renewal_count}</td>
+          <td>{fine_interval}</td>
+          <td>{fine_rate}</td>
+          <td>{max fine}</td>
+          <td>{max recall}</td>
+          <td>{recall_min_loan}</td>
+          <td>{recall_fine_interval}</td>
+          <td>{recall_fine_rate}</td>
+          <td>{grace_period}</td>
+          <td>{renew date}</td>
+          <td>{recall_notice_interval}</td>
+          <td>{courtesy_notice_min_loan}</td>
+          <td>{first_overdue_interval}</td>
+          <td>{lost_notice_interval}</td>
+          <td>{other_notice_interval}</td>
+          <td>{other_notice_count}</td>
+          <td>{recall_grace_period}</td>
+          <td>{recall_notice_count}</td>
+          <td>{hold_shelf_life}</td>
+          <td>{hold_shelf_life_interval}</td>
+          <td>{charge_limit_apply}</td>
+          <td>{charge_limit}</td></tr></tbody></table></div></body>
+</html>

@@ -1,3 +1,4 @@
+--ACCESS=access content
 select	mp.master_profile_name,
 	o.first_name,
 	o.last_name,

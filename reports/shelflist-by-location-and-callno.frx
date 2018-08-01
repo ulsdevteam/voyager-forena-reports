@@ -10,8 +10,8 @@
     <frx:fields/>
     <frx:parameters>
   <frx:parm id="location_list" label="Location List" require="1" desc="You can select multiple locations, however, selecting one location at a time works best." data_source="voyager-prod/lookup-voyager-locations" data_field="location_id" label_field="location_name" type="multiselect" class="huge-selector"/>
-  <frx:parm id="start_call" label="Start Call Number" desc="Voyager Normalized, e.g.: PQ 1301 A 589" type="textfield" class="normalizeCallNumber"/>
-  <frx:parm id="end_call" label="End Call Number" desc="Voyager Normalized, e.g.: PQ 1301 A 589" type="textfield" class="normalizeCallNumber"/>
+  <frx:parm id="start_call" label="Start Call Number" type="textfield" class="normalizeCallNumber"/>
+  <frx:parm id="end_call" label="End Call Number" type="textfield" class="normalizeCallNumber"/>
   <frx:parm id="include_missing_callno" label="Include Items with Missing Call Numbers" desc="Select if you want to include items in the location(s) with missing call numbers" type="checkbox">N</frx:parm>
 </frx:parameters>
     <frx:docgen>

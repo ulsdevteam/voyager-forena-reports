@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Bib ID Action Totals based upon Operator ID (Not needed, possibly delete)</title>
+    <frx:category>Voyager - General Reports</frx:category>
+    <frx:options/>
+    <frx:fields/>
+    <frx:parameters>
+  <frx:parm id="operator_id" label="Operator ID" require="1" desc="Please enter the Operator name." data_source="voyager-prod/lookup-voyager-operator-ids" data_field="operator_id" label_field="operator_id" type="select"/>
+</frx:parameters>
+    <frx:docgen>
+  <frx:doc type="web"/>
+  <frx:doc type="csv"/>
+  <frx:doc type="html"/>
+  <frx:doc type="doc"/>
+  <frx:doc type="xls"/>
+</frx:docgen>
+  <frx:menu/><style/><frx:cache/></head>
+  <body>
+
+  <div id="bibs-from-operator-id-action-type_block" class="FrxTable" frx:block="voyager-prod/bibs-from-operator-id-action-type">
+    <table>
+      <thead>
+        <tr>
+          <th>Action Type</th>
+          <th>Total</th></tr></thead>
+      <tbody>
+        <tr id="bibs-from-operator-id-action-type" frx:foreach="*">
+          <td>{action_type}</td>
+          <td>{total}</td></tr></tbody></table></div></body>
+</html>

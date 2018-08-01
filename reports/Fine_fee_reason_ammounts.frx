@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Fine/Fee - Reason Refund Amounts Circ Happ Loc</title>
+<meta content="" name="description"/>
+<frx:category>Voyager - Circulation</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="startdate" require="1" type="date_popup"/>
+  <frx:parm id="enddate" require="1" type="date_popup"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+</head>
+<body>
+<div id="voy-fine-fee-reason-refund-amounts-circ-happ-loc_block" class="FrxTable" frx:block="voyager-prod/voy-fine-fee-reason-refund-amounts-circ-happ-loc">
+    <table>
+      <thead>
+        <tr>
+          <th>circ loc</th>
+          <th>accured demerit</th>
+          <th>accured fine</th>
+          <th>damage repair</th>
+          <th>database</th>
+          <th>demerit</th>
+          <th>eal printing</th>
+          <th>equip replace</th>
+          <th>hsls doc express</th>
+          <th>hsls member services</th>
+          <th>ill</th>
+          <th>library lib card purchase</th>
+          <th>lost equip process</th>
+          <th>lost item process</th>
+          <th>lost item replace</th>
+          <th>media late charge</th>
+          <th>media usage fee</th>
+          <th>misc</th>
+          <th>overdue</th>
+          <th>owes other schools</th>
+          <th>photo copy</th>
+          <th>recall fine</th>
+          <th>returned check</th>
+          <th>rush recall fine</th>
+          <th>see notes</th>
+          <th>vendor card</th>
+          <th>location fine/fee total</th></tr></thead>
+      <tbody>
+        <tr id="voy-fine-fee-reason-refund-amounts-circ-happ-loc" frx:foreach="*">
+          <td>{circ loc}</td>
+          <td>{accured demerit}</td>
+          <td>{accured fine}</td>
+          <td>{damage repair}</td>
+          <td>{database}</td>
+          <td>{demerit}</td>
+          <td>{eal printing}</td>
+          <td>{equip replace}</td>
+          <td>{hsls doc express}</td>
+          <td>{hsls member services}</td>
+          <td>{ill}</td>
+          <td>{library lib card purchase}</td>
+          <td>{lost equip process}</td>
+          <td>{lost item process}</td>
+          <td>{lost item replace}</td>
+          <td>{media late charge}</td>
+          <td>{media usage fee}</td>
+          <td>{misc}</td>
+          <td>{overdue}</td>
+          <td>{owes other schools}</td>
+          <td>{photo copy}</td>
+          <td>{recall fine}</td>
+          <td>{returned check}</td>
+          <td>{rush recall fine}</td>
+          <td>{see notes}</td>
+          <td>{vendor card}</td>
+          <td>{location fine/fee total}</td></tr></tbody></table></div></body>
+</html>

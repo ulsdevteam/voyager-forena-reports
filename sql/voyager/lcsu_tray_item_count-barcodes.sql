@@ -10,3 +10,4 @@ and SUBSTR(item.spine_label,9,3) like UPPER(:shelf)
 and SUBSTR(item.spine_label,13,3) like UPPER(:tray)
 and item.item_id = item_barcode.item_id
 group by item_barcode.item_barcode order by item_barcode.item_barcode asc
+

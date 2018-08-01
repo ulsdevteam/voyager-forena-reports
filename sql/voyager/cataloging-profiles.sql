@@ -1,3 +1,4 @@
+--ACCESS=forena category Voyager - Profiles - Cataloging
 select cp.cat_profile_name,
 	o.first_name,
 	o.last_name,

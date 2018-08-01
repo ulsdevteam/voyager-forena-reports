@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>LCSU test</title>
+<meta content="" name="description"/>
+<frx:category>Voyager - Profiles - General</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="range" require="1" desc="Please enter Highbay Range. e.g. R01" type="textfield"/>
+  <frx:parm id="module" require="1" desc="Please enter Highbay Module. e.g. M01" type="textfield"/>
+  <frx:parm id="shelf" require="1" desc="Please enter Highbay Shelf. e.g. S01" type="textfield"/>
+  <frx:parm id="tray" require="1" desc="Please enter Highbay Tray. e.g. T01" type="textfield"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+</head>
+<body>
+<div id="lcsu_tray_item_count-barcodes_block" class="FrxTable" frx:block="voyager-prod/lcsu_tray_item_count-barcodes">
+    <table>
+      <thead>
+        <tr>
+          <th>item barcode</th></tr></thead>
+      <tbody>
+        <tr id="lcsu_tray_item_count-barcodes" frx:foreach="*">
+          <td>{item_barcode}</td></tr></tbody></table></div></body>
+</html>

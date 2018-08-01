@@ -1,3 +1,4 @@
+--ACCESS=forena category Voyager - Profiles - Circulation
 select cp.circ_profile_name,
 	o.first_name,
 	o.last_name,

@@ -14,23 +14,17 @@
 </frx:docgen>
 <frx:fields>
 
-  <frx:field id="invoice_total" format="curency" format-string="en_US %n"/>
+  <frx:field id="invoice_total" format="currency" format-string="en_US %n"/>
 
 
   <frx:field id="line item subtotal" format="currency" format-string="en_US %n"/>
-
-
-
-
-
-
 </frx:fields>
 <frx:menu/>
 <frx:cache/>
 <style/>
 <frx:description/></head>
 <body>
-<div id="pending-invoices_block" class="FrxTable" frx:block="voyager-acquisitions/pending-invoices">
+<div id="pending-invoices_block" class="FrxTable" frx:block="voyager-cataloging/pending-invoices">
 <p>List of Pending Expeditures/Invoices</p>
     <table>
       <thead>

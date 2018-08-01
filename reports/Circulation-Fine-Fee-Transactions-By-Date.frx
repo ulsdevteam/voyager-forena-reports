@@ -28,7 +28,23 @@
   <frx:menu/><style/><frx:cache/><frx:description/><meta content="Report showing transaction payment method totals for all libraries for a specified date range." name="description"/></head>
   <body>
 
-  <div id="circmenu-transactions-begin-end_block" class="FrxTable" frx:block="voyager-circ-finefee/circmenu-transactions-begin-end">
+  <div id="circmenu-transactions-begin-end_block" class="FrxTable" frx:block="voyager-prod/circmenu-transactions-begin-end">
+<p>Report showing transaction payment method totals for all libraries for a specified date range.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Transaction Date</th>
+          <th>Transaction Amount</th>
+          <th>Transaction Description</th>
+          <th>Method Description</th>
+          <th>Location Name</th></tr></thead>
+      <tbody>
+        <tr id="circmenu-transactions-begin-end" frx:foreach="*">
+          <td>{trans_date}</td>
+          <td>{trans_amount}</td>
+          <td>{transaction_desc}</td>
+          <td>{method_desc}</td>
+          <td>{location_name}</td></tr></tbody></table></div><div id="circmenu-transactions-begin-end_block" class="FrxTable" frx:block="voyager-prod/circmenu-transactions-begin-end">
     <table>
       <thead>
         <tr>

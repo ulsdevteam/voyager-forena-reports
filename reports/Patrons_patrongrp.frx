@@ -19,7 +19,7 @@
 <style/>
 <frx:description/><meta content="Report showing the outstanding balance (all fine and fee types) on patron Voyager accounts listed by patron ID, patron group, first and last name, total fees due. " name="description"/></head>
 <body>
-<div id="patron_group_info_block" class="FrxTable" frx:block="voyager-circ-finefee/patron_group_info">
+<div id="patron_group_info_block" class="FrxTable" frx:block="voyager-prod/patron_group_info">
 <p>Report showing the outstanding balance (all fine and fee types) on patron Voyager accounts listed by patron ID, patron group, first and last name, total fees due.</p>
     <table>
       <thead>

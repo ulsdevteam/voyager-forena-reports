@@ -40,12 +40,13 @@ select l.location_code "Circ Loc",
 		  CASE f.trans_type WHEN 12 THEN f.trans_amount / 100  ELSE 0 END + CASE f.trans_type WHEN 18 THEN f.trans_amount / 100  ELSE 0 END + 
 		  CASE f.trans_type WHEN 14 THEN f.trans_amount / 100  ELSE 0 END) "Location Fine/Fee Total"
 		  
-	          FROM pittdb.fine_fee_transactions f, pittdb.location l, pittdb.fine_fee ff
-where (l.library_id = 2 or l.library_id = 1 or l.library_id = 3 or l.library_id = 5 or l.library_id = 6 or l.library_id = 7 or l.library_id = 9 or l.library_id = 10) and
+	          FROM pittdb.fine_fee_transactions f, pittdb.location l, pittdb.fine_fee ff inner join
+		  pittdb.fine_fee_type fft ON (ff.fine_fee_type = fft.fine_fee_type)
+where l.library_id in(2,1,3,5,6,7,9,10) and
 	l.location_id = f.trans_location and
-	f.fine_fee_id = ff.fine_fee_id and
-	f.trans_type  = 4 and
-	trans_date between :startdate and to_date(:enddate) +1
+	(f.fine_fee_id = ff.fine_fee_id) and
+	f.trans_type  in (4) and
+        trans_date between :startdate and to_date(:enddate) +1
 GROUP BY
 	l.location_code 
 	ORDER BY

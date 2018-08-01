@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>LCSU High Bay Storage Snapshot</title>
+<meta content="LCSU – High bay storage snapshot" name="description"/>
+<frx:category/>
+<frx:options/>
+<frx:parameters>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/></head>
+<body>
+<div id="lcsu_high-bay_storage_snapshot_block" class="FrxTable" frx:block="voyager-prod/lcsu_high-bay_storage_snapshot">
+<p>This is an LCSU report that shows each range, module and shelf and its corresponding current tray settings in the high bay storage.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>rangeno</th>
+          <th>shelfno</th>
+          <th>m1</th>
+          <th>m2</th>
+          <th>m3</th>
+          <th>m4</th>
+          <th>m5</th>
+          <th>m6</th>
+          <th>m7</th>
+          <th>m8</th>
+          <th>m9</th>
+          <th>m10</th>
+          <th>m11</th>
+          <th>m12</th>
+          <th>m13</th>
+          <th>m14</th>
+          <th>m15</th>
+          <th>m16</th>
+          <th>m17</th>
+          <th>m18</th>
+          <th>m19</th>
+          <th>m20</th>
+          <th>m21</th>
+          <th>m22</th>
+          <th>m23</th>
+          <th>m24</th></tr></thead>
+      <tbody>
+        <tr id="lcsu_high-bay_storage_snapshot" frx:foreach="*">
+          <td>{rangeno}</td>
+          <td>{shelfno}</td>
+          <td>{m1}</td>
+          <td>{m2}</td>
+          <td>{m3}</td>
+          <td>{m4}</td>
+          <td>{m5}</td>
+          <td>{m6}</td>
+          <td>{m7}</td>
+          <td>{m8}</td>
+          <td>{m9}</td>
+          <td>{m10}</td>
+          <td>{m11}</td>
+          <td>{m12}</td>
+          <td>{m13}</td>
+          <td>{m14}</td>
+          <td>{m15}</td>
+          <td>{m16}</td>
+          <td>{m17}</td>
+          <td>{m18}</td>
+          <td>{m19}</td>
+          <td>{m20}</td>
+          <td>{m21}</td>
+          <td>{m22}</td>
+          <td>{m23}</td>
+          <td>{m24}</td></tr></tbody></table></div></body>
+</html>

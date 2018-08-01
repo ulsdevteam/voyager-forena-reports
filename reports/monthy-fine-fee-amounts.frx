@@ -10,22 +10,16 @@
     <frx:fields>
   <frx:field id="start_date"/>
 
-  <frx:field id="cash" format="sprintf" format-string="$%.2f"/>
+  <frx:field id="cash" format="number" format-string="$,."/>
 
-  <frx:field id="total_payment_amount" format="sprintf" format-string="$%.2f"/>
-
-
+  <frx:field id="total_payment_amount" format="currency" format-string="en_US %n"/>
 
 
 
 
-  <frx:field id="check" format="sprintf" format-string="$%.2f"/>
 
-  <frx:field id="voucher" format="sprintf" format-string="$%.2f"/>
 
-  <frx:field id="credit_card" format="sprintf" format-string="$%.2f"/>
-
-  <frx:field id="panther_funds" format="sprintf" format-string="$%.2f"/>
+  <frx:field id="total_amount" format="currency"/>
 </frx:fields>
     <frx:parameters>
   <frx:parm id="startdate" label="Starting Date" require="1" type="date_popup"/>

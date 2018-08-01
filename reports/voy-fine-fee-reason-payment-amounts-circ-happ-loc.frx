@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Fine Fee - Payments by Fee Type/Circulation Location by Date Range</title>
+    <frx:category>Voyager - Circulation</frx:category>
+    <frx:options/>
+    <frx:fields/>
+    <frx:parameters>
+  <frx:parm id="startdate" require="1" type="date_popup"/>
+  <frx:parm id="enddate" require="1" type="date_popup"/>
+</frx:parameters>
+    <frx:docgen>
+  <frx:doc type="html"/>
+  <frx:doc type="xls"/>
+</frx:docgen>
+  <frx:menu/><style/><frx:cache/><frx:description/><meta content="Report shows only the total payments posted at each library for a specific date range.  Not broken down by posting type, operator ID, item or patron information." name="description"/></head>
+  <body>
+
+  <div id="voy-fine-fee-reason-payment-amounts-circ-happ-loc_block" class="FrxTable" frx:block="voyager-circ-finefee/voy-fine-fee-reason-payment-amounts-circ-happ-loc">
+<p>Report shows only the total payments posted at each library for a specific date range.  Not broken down by posting type, operator ID, item or patron information.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Circulation Location</th>
+          <th>Accrued Demerit</th>
+          <th>Accrued Fine</th>
+          <th>Damage Repair</th>
+          <th>Database</th>
+          <th>demerit</th>
+          <th>EAL Printing</th>
+          <th>Equipment Replacement</th>
+          <th>HSLS Document Express</th>
+          <th>HSLS Member Services</th>
+          <th>ILL</th>
+          <th>Library Card Purchase</th>
+          <th>Lost Equip Processing</th>
+          <th>Lost Item Processing</th>
+          <th>Lost Item Replacement</th>
+          <th>Media Booking Late Charge</th>
+          <th>Media Booking Usage Fee</th>
+          <th>Miscellaneous</th>
+          <th>Overdue</th>
+          <th>Owes Other Schools</th>
+          <th>Photocopy</th>
+          <th>Recall Fine</th>
+          <th>Returned Check</th>
+          <th>Rush Recall Fine</th>
+          <th>See Notes</th>
+          <th>Vendorcard</th>
+          <th>Location Fine Fee Total</th></tr></thead>
+      <tbody>
+        <tr id="voy-fine-fee-reason-payment-amounts-circ-happ-loc" frx:foreach="*">
+          <td>{circ_loc}</td>
+          <td>{accrued_demerit}</td>
+          <td>{accrued_fine}</td>
+          <td>{damage_repair}</td>
+          <td>{database}</td>
+          <td>{demerit}</td>
+          <td>{eal_printing}</td>
+          <td>{equip_replace}</td>
+          <td>{hsls_doc_express}</td>
+          <td>{hsls_member_services}</td>
+          <td>{ill}</td>
+          <td>{library_lib_card_purchase}</td>
+          <td>{lost_equip_process}</td>
+          <td>{lost_item_process}</td>
+          <td>{lost_item_replace}</td>
+          <td>{media_late_charge}</td>
+          <td>{media_usage_fee}</td>
+          <td>{misc}</td>
+          <td>{overdue}</td>
+          <td>{owes_other_schools}</td>
+          <td>{photo_copy}</td>
+          <td>{recall_fine}</td>
+          <td>{returned_check}</td>
+          <td>{rush_recall_fine}</td>
+          <td>{see_notes}</td>
+          <td>{vendor_card}</td>
+          <td>{location_fine_fee_total}</td></tr></tbody></table></div></body>
+</html>

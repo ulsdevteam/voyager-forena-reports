@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Profile Locations</title>
+    <frx:category>Voyager - Profiles - General</frx:category>
+    <frx:options/>
+    <frx:fields/>
+    <frx:parameters/>
+    <frx:docgen/>
+  </head>
+  <body>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div id="profile-locations_block" class="FrxTable" frx:block="voyager-prod/profile-locations">
+    <table>
+      <thead>
+        <tr>
+          <th>profile_type</th>
+          <th>profile_name</th>
+          <th>location_code</th>
+          <th>location_name</th></tr></thead>
+      <tbody>
+        <tr id="profile-locations" frx:foreach="*">
+          <td>{profile_type}</td>
+          <td>{profile_name}</td>
+          <td>{location_code}</td>
+          <td>{location_name}</td></tr></tbody></table></div></body>
+</html>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Item status and item info per designated barcode</title>
+<frx:category>Voyager - Circulation</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="itembarcode" label="Item Barcode"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/><meta content="Report to show item status on a specified day for a specific item barcode. Columns show the specified day, item barcode, barcode status, copy number, permanent item type, permanent location, brief title, author, historical charges, historical browses, reserve charges, holds placed, recalls placed, item status, date status applied. No indication what previous was.&#13;&#10;" name="description"/></head>
+<body>
+<div id="circmenu_12_block" class="FrxTable FrxTable" frx:block="voyager-circ-trans/circmenu_12">
+<p>Report to show item status on a specified day for a specific item barcode. Columns show the specified day, item barcode, barcode status, copy number, permanent item type, permanent location, brief title, author, historical charges, historical browses, reserve charges, holds placed, recalls placed,item status, date status applied. No indication what previous was.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Run Date</th>
+          <th>Item Information for Barcode </th>
+          <th>Barcode Status</th>
+          <th>Item ID</th>
+          <th>Copy Number</th>
+          <th>Perm Item Type</th>
+          <th>Perm Location</th>
+          <th>Brief Title</th>
+          <th>Author</th>
+          <th>Historical Charges</th>
+          <th>Historical Browses</th>
+          <th>Reserve Charges</th>
+          <th>Holds Placed</th>
+          <th>Recalls Placed</th>
+          <th>Item Status</th>
+          <th>Status Date</th></tr></thead>
+      <tbody>
+        <tr id="circmenu_12" frx:foreach="*">
+          <td>{sysdate}</td>
+          <td>{item_barcode}</td>
+          <td>{barcode_status_desc}</td>
+          <td>{item_id}</td>
+          <td>{copy_number}</td>
+          <td>{item_type_display}</td>
+          <td>{location_code}</td>
+          <td>{title_brief}</td>
+          <td>{author}</td>
+          <td>{historical_charges}</td>
+          <td>{historical_browses}</td>
+          <td>{reserve_charges}</td>
+          <td>{holds_placed}</td>
+          <td>{recalls_placed}</td>
+          <td>{item_status_desc}</td>
+          <td>{item_status_date}</td></tr></tbody></table></div></body>
+</html>

@@ -7,15 +7,7 @@
     <title>Circ Stats - Ordered By Location</title>
     <frx:category>Voyager - Circulation</frx:category>
     <frx:options/>
-    <frx:fields>
-  <frx:field id="active_charges" format="sprintf" format-string="$%.2f"/>
-
-  <frx:field id="archive_charges" format="sprintf" format-string="$%.2f"/>
-
-  <frx:field id="total_charges" format="sprintf" format-string="$%.2f"/>
-
-  <frx:field id="total_charges_and_renewals" format="sprintf" format-string="$%.2f"/>
-</frx:fields>
+    <frx:fields/>
     <frx:parameters>
   <frx:parm id="startdate" label="Start Date" require="1" type="date_popup"/>
   <frx:parm id="enddate" label="End Date" require="1" type="date_popup"/>
@@ -27,26 +19,26 @@
   <frx:doc type="xls"/>
 </frx:docgen>
   <frx:menu/><style>table {&#13;
-        font-family: verdana,arial,sans-serif;&#13;
-        font-size:11px;&#13;
-        color:#333333;&#13;
-        border-width: 1px;&#13;
-        border-color: #666666;&#13;
-        border-collapse: collapse;&#13;
+	font-family: verdana,arial,sans-serif;&#13;
+	font-size:11px;&#13;
+	color:#333333;&#13;
+	border-width: 1px;&#13;
+	border-color: #666666;&#13;
+	border-collapse: collapse;&#13;
 }&#13;
 th {&#13;
-        border-width: 1px;&#13;
-        padding: 8px;&#13;
-        border-style: solid;&#13;
-        border-color: #666666;&#13;
-        background-color: #cecece;&#13;
+	border-width: 1px;&#13;
+	padding: 8px;&#13;
+	border-style: solid;&#13;
+	border-color: #666666;&#13;
+	background-color: #cecece;&#13;
 }&#13;
 td {&#13;
-        border-width: 1px;&#13;
-        padding: 8px;&#13;
-        border-style: solid;&#13;
-        border-color: #666666;&#13;
-        background-color: #ffffff;&#13;
+	border-width: 1px;&#13;
+	padding: 8px;&#13;
+	border-style: solid;&#13;
+	border-color: #666666;&#13;
+	background-color: #ffffff;&#13;
 }&#13;
 &#13;
 tr.odd td {&#13;
