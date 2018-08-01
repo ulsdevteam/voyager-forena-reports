@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Record Counts LOCS by Date Range</title>
+<frx:category>Voyager - General Reports</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="startdate" label="Start Date" require="1" type="date_popup"/>
+  <frx:parm id="enddate" label="End Date" require="1" type="date_popup"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/><meta content="In this job, the bib count is larger than the count of actual bib records as a bib rec was counted more than once if there are two or more mfhds with different locs linked to the bib" name="description"/></head>
+<body>
+<div id="moreccntloc_bibs_block" class="FrxTable FrxTable" frx:block="voyager-circ-trans/moreccntloc_bibs">In this job, the bib count is larger than the count of actual bib records
+as a bib rec was counted more than once if there are two or more mfhds with different locs linked to the bib
+
+
+
+    <table>
+      <caption>BIBS Monthly Record Totals</caption>
+      <thead>
+        <tr>
+          <th>BIBS Total</th>
+          <th>BIBS Suppressed</th>
+          <th>BIBS Unsuppressed</th></tr></thead>
+      <tbody>
+        <tr id="moreccntloc_bibs" frx:foreach="*">
+          <td>{bibs_total}</td>
+          <td>{bibs_suppressed}</td>
+          <td>{bibs_unsuppressed}</td></tr></tbody></table></div><div id="moreccntloc_mfhds_block" class="FrxTable FrxTable" frx:block="voyager-circ-trans/moreccntloc_mfhds">
+
+
+
+    <table>
+      <caption>MFHD Monthly Record Totals</caption>
+      <thead>
+        <tr>
+          <th>MFHDS Total</th>
+          <th>MFHDS Suppressed</th>
+          <th>MFHDS Unsuppressed</th></tr></thead>
+      <tbody>
+        <tr id="moreccntloc_mfhds" frx:foreach="*">
+          <td>{mfhds_total}</td>
+          <td>{mfhds_suppressed}</td>
+          <td>{mfhds_unsuppressed}</td></tr></tbody></table></div><div id="moreccntloc_items_block" class="FrxTable FrxTable" frx:block="voyager-circ-trans/moreccntloc_items">
+
+    <table>
+      <caption>ITEMS Monthly Record Totals</caption>
+      <thead>
+        <tr>
+          <th>ITEMSTtotal</th>
+          <th>ITEMS Active Barcodes</th></tr></thead>
+      <tbody>
+        <tr id="moreccntloc_items" frx:foreach="*">
+          <td>{items_total}</td>
+          <td>{items_active_barcodes}</td></tr></tbody></table></div><div id="moreccntloc_locs_block" class="FrxTable FrxTable" frx:block="voyager-circ-trans/moreccntloc_locs">note that SSEA locs are in the total but not treated separately
+
+
+
+
+    <table>
+      <caption>LOCS Monthly Record Totals</caption>
+      <thead>
+        <tr>
+          <th>LOCS Total</th>
+          <th>LOCS Bradford</th>
+          <th>LOCS Greensburg</th>
+          <th>LOCS Johnstown</th>
+          <th>LOCS Titusville</th>
+          <th>LOCS HSLS</th>
+          <th>LOCS Law</th>
+          <th>LOCS SSEA</th>
+          <th>LOCS ULS</th></tr></thead>
+      <tbody>
+        <tr id="moreccntloc_locs" frx:foreach="*">
+          <td>{locs_total}</td>
+          <td>{locs_bradford}</td>
+          <td>{locs_greensburg}</td>
+          <td>{locs_johnstown}</td>
+          <td>{locs_titusville}</td>
+          <td>{locs_hsls}</td>
+          <td>{locs_law}</td>
+          <td>{locs_ssea}</td>
+          <td>{locs_uls}</td></tr></tbody></table></div><div id="moreccntloc_happlocs_block" class="FrxTable FrxTable" frx:block="voyager-circ-trans/moreccntloc_happlocs">zzzzdeftAQ and lcbk are not included in the report
+
+    <table>
+      <caption>LOCS Monthly Happening Locations</caption>
+      <thead>
+        <tr>
+          <th>LOCS - Happening Locations</th></tr></thead>
+      <tbody>
+        <tr id="moreccntloc_happlocs" frx:foreach="*">
+          <td>{count(suppress_in_opac)}</td></tr></tbody></table></div></body>
+</html>

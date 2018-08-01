@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Master Profiles</title>
+    <frx:category>Voyager - Profiles - Master</frx:category>
+    <frx:options/>
+    <frx:fields/>
+    <frx:parameters/>
+    <frx:docgen>
+  <frx:doc type="csv"/>
+  <frx:doc type="html"/>
+  <frx:doc type="doc"/>
+  <frx:doc type="xls"/>
+  <frx:doc type="xml"/>
+</frx:docgen>
+  <frx:menu type="normal-item"/><style>table {&#13;
+                font-family: verdana,arial,sans-serif;&#13;
+                font-size:11px;&#13;
+                color:#333333;&#13;
+                border-width: 1px;&#13;
+                border-color: #666666;&#13;
+                border-collapse: collapse;&#13;
+}&#13;
+th {&#13;
+                border-width: 1px;&#13;
+                padding: 8px;&#13;
+                border-style: solid;&#13;
+                border-color: #666666;&#13;
+                background-color: #cecece;&#13;
+}&#13;
+td {&#13;
+                border-width: 1px;&#13;
+                padding: 8px;&#13;
+                border-style: solid;&#13;
+                border-color: #666666;&#13;
+                background-color: #ffffff;&#13;
+}&#13;
+&#13;
+tr.odd td {&#13;
+        background-color: #eeeeee;&#13;
+}&#13;
+&#13;
+tr.even td {&#13;
+}&#13;
+</style><frx:description/><meta content="A list of Master Profiles, Operators and associated permission settings. These settings can be found in the Voyager System Administration client under Security - Master Profiles." name="description"/></head>
+  <body>
+  <div id="master-profiles_block" class="FrxTable" frx:block="voyager-prod/master-profiles">
+    <p>A list of Master Profiles, Operators and associated permission settings.  These settings can be found in the Voyager System Administration client under Security - Master Profiles.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Master Profile Name</th>
+          <th>Operator First Name</th>
+          <th>Operator Last Name</th>
+          <th>Operator ID</th>
+          <th>Security (add,edit,delete)</th>
+          <th>Security (view)</th>
+          <th>Acq/Serials Policy Groups (add,edit,delete)</th>
+          <th>Acq/Serials Policy Groups (view)</th>
+          <th>Cataloging Policy Groups (add,edit,delete)</th>
+          <th>Cataloging Policy Groups (view)</th>
+          <th>Circulation Policy Groups (add,edit,delete)</th>
+          <th>Circulation Policy Groups (view)</th>
+          <th>Patron Groups (add,edit,delete)</th>
+          <th>Patron Groups (view)</th>
+          <th>System-Wide and OPAC Configuration (add,edit,delete)</th>
+          <th>System-Wide and OPAC Configuratoin (edit)</th>
+          <th>Cluster Create</th>
+          <th>Cluster Edit</th>
+          <th>Cluster Delete</th>
+          <th>Cluster View</th>
+          <th>Media Policy Groups (view,add,edit,delete)</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr id="master-profiles" frx:foreach="*">
+          <td style="white-space:nowrap">{master_profile_name}</td>
+          <td style="white-space:nowrap">{first_name}</td>
+          <td style="white-space:nowrap">{last_name}</td>
+          <td style="text-align:center">{operator_id}</td>
+          <td style="text-align:center">{security}</td>
+          <td style="text-align:center">{security_view}</td>
+          <td style="text-align:center">{acq_policies}</td>
+          <td style="text-align:center">{acq_policies_view}</td>
+          <td style="text-align:center">{cat_policies}</td>
+          <td style="text-align:center">{cat_policies_view}</td>
+          <td style="text-align:center">{circ_policies}</td>
+          <td style="text-align:center">{circ_policies_view}</td>
+          <td style="text-align:center">{patron_group_edit}</td>
+          <td style="text-align:center">{patron_group_view}</td>
+          <td style="text-align:center">{system_definitions}</td>
+          <td style="text-align:center">{system_defs_view}</td>
+          <td style="text-align:center">{cluster_create}</td>
+          <td style="text-align:center">{cluster_edit}</td>
+          <td style="text-align:center">{cluster_delete}</td>
+          <td style="text-align:center">{cluster_view}</td>
+          <td style="text-align:center">{media_policies}</td>
+       </tr>
+     </tbody>
+  </table>
+  </div>
+</body>
+</html>

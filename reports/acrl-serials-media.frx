@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>ACRL Serials and Media</title>
+    <frx:category>Voyager - Assessment and External Reporting</frx:category>
+    <frx:options/>
+    <frx:fields>
+  <frx:field id="category"/>
+  <frx:field id="title_count"/>
+  <frx:field id="e" link="e" format="e" format-string="e" target="e" rel="e" class="e" add-query="e">e</frx:field>
+</frx:fields>
+    <frx:parameters/>
+    <frx:docgen/>
+  <frx:menu/><style/><frx:cache/><frx:description/><meta content="2015 ACRL Survey question regarding Digital and Physical collection size of Serials and Media." name="description"/></head>
+  <body>
+
+  <div id="acrl-serials-media_block" class="FrxTable" frx:block="voyager-statistics/acrl-serials-media">
+    <table>
+      <thead>
+        <tr>
+          <th>category</th>
+          <th>title_count</th></tr></thead>
+      <tbody>
+        <tr id="acrl-serials-media" frx:foreach="*">
+          <td>{category}</td>
+          <td>{title_count}</td></tr></tbody></table></div>
+<h2>From the 2015 Survey Instructions</h2>
+<h3>Serial titles (line 41, column (1) and column (2))</h3>
+<p>
+Please note:  specific collection information about serials is not reported in the AL component. However, serials are an important content source by users of academic libraries.  These measures are requested because of the importance of journals and other serials to academic library users, and as an informational data point to help libraries seeking such information for benchmarking studies.
+</p>
+<p>
+Report the number of physical (line 41, column (1)) and digital/electronic (line 41, column (2)) serial titles that are accessible to users through the library’s catalog or discovery system.  
+</p>
+<p>
+A serial is a publication in any medium issued in successive parts bearing numerical or chronological designations and intended to be continued indefinitely. This definition includes, in any format, periodicals, newspapers, and annuals (reports, yearbooks, etc.); the journals, memoirs, proceedings, transactions, etc. of societies; and numbered monographic series. [NISO 39.7-2013, section 4.3]
+</p>
+<p>
+An e-serial is a periodical publication that is published in digital form to be displayed on a computer screen.
+</p>
+<h4>Additional survey guidance: </h4>
+<ul>
+<li>report serial titles, not subscriptions. </li>
+<li>include count of ceased titles if available. </li>
+<li>do not count earlier title changes. Do not worry about removing any earlier titles in title changes. </li>
+<li>include open access (OA) titles if the individual titles are searchable through the library’s catalog or discovery system.</li>
+<li>if possible, for each measure, report the count of only those de-duplicated or otherwise unique serial titles searchable through the library’s catalog or discovery system. A source for counting e-serials may be a library- or vendor-developed A-Z title list of e-journals. </li>
+</ul>
+ 
+<h3>Physical Media (line 43, column (1))</h3>
+<p>
+Report the total titles of media materials that are displayed by visual projections or magnification or through sound reproduction, or both, including graphic materials, audio materials (include audio books), motion pictures, video materials, and special visual materials such as three-dimensional materials. Items packaged together as a unit (e.g. two CD-ROMs for one record book) and checked out as a unit are counted as one physical unit. [AL component] 
+</p>
+<h4>Additional survey guidance: </h4>
+<ul>
+<li>media is counted as titles.  For example, count microform titles not the number of boxes of microfilm rolls. </li>
+<li>report titles cataloged and/or searchable through the library’s catalog or discovery system. </li>
+<li>microforms are photographic reproduction of textual, tabular, or graphic material reduced in size so that they can be used only with magnification. Examples of microforms are roll microfilm, aperture cards, microfiche, ultrafiche, and reproductions on opaque material. [AL component]</li>
+<li>cartographic material are materials representing in whole or in part the earth or any celestial body at any scale (e.g., maps and charts). [AL component]</li>
+<li>Z39.7-2013 defines graphic materials as: “Opaque (e.g., two-dimensional) art originals and reproductions, charts, photographs or materials intended to be projected or viewed without sound, e.g., filmstrips, transparencies, photographs, posters, pictures, radiographs, slides, and collections of such materials.” [NISO Z39.7-2013, section 4.6]  </li>
+</ul>
+</body>
+</html>

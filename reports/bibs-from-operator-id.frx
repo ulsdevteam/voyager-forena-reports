@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Bib ID List based on Operator ID</title>
+    <frx:category>Voyager - General Reports</frx:category>
+    <frx:options/>
+    <frx:fields/>
+    <frx:parameters>
+  <frx:parm id="operator_id" label="Operator ID" require="1" desc="Please enter the Operator name associated with the Bib IDs you want to pull." data_source="voyager-prod/lookup-voyager-operator-ids" data_field="operator_id" label_field="operator_id" type="select"/>
+</frx:parameters>
+    <frx:docgen>
+  <frx:doc type="csv"/>
+  <frx:doc type="html"/>
+  <frx:doc type="doc"/>
+  <frx:doc type="xls"/>
+</frx:docgen>
+  <frx:menu/><style/><frx:cache/><frx:description/><meta content="This report displays a list of bib numbers for unsuppressed records associated with a specific operator ID (vendor or individual). Used to identify bib. records for batch actions such as deletion." name="description"/></head>
+  <body>
+<p>This report displays a list of bib numbers for unsuppressed records associated with a specific operator ID (vendor or individual). Used to identify bib. records for batch actions such as deletion.</p>
+<p>In Production 10/10/2017. Description defined 10/10/2017</p>
+  <div id="bibs-from-operator-id_block" class="FrxTable" frx:block="voyager-prod/bibs-from-operator-id">
+    <table>
+      <thead>
+        <tr>
+          <th>bib_id</th></tr></thead>
+      <tbody>
+        <tr id="bibs-from-operator-id" frx:foreach="*">
+          <td>{bib_id}</td></tr></tbody></table></div></body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>LCSU Shelf Display</title>
+<meta content="Programmatic view of what's shelved in the High Bay Storage Unit" name="description"/>
+<frx:category>Voyager - General Reports</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="range" label="Range" require="1" data_source="voyager-prod/lookup-highbay-range" type="select"/>
+  <frx:parm id="module" label="Module" require="1" data_source="voyager-prod/lookup-highbay-module" type="select"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/></head>
+<body>
+<div id="lcsu-shelf-display_block" class="FrxTable" frx:block="voyager-prod/lcsu-shelf-display">
+<p>Programmatic view of what's shelved in the High Bay Storage Unit</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Range Display</th></tr></thead>
+      <tbody>
+        <tr id="lcsu-shelf-display" frx:foreach="*">
+          <td>{substr(spine_label,1,15)}</td></tr></tbody></table></div></body>
+</html>

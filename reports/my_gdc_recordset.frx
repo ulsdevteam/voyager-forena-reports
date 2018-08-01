@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>GDC Recordsets</title>
+<frx:category>Voyager - Cataloging</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="recordsetid" label="Record Set Name" data_source="voyager-prod/lookups/gdc-recordset-by-user" type="select"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/><meta content="Lists the identifiers contained within a selected Global Data Change recordset, selected by record set name." name="description"/></head>
+<body>
+<div id="gdc-recordset-by-id_block" class="FrxTable" frx:block="voyager-metadata/gdc-recordset-by-id">
+    <table>
+      <thead>
+        <tr>
+          <th>Record ID</th>
+          <th>Record Type</th></tr></thead>
+      <tbody>
+        <tr id="gdc-recordset-by-id" frx:foreach="*">
+          <td>{record_id}</td>
+          <td>{record_type_desc}</td></tr></tbody></table></div></body>
+</html>

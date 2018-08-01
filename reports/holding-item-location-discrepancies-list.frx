@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>List of Items with Mismatched Holding and Permanent Locations</title>
+    <frx:category>Voyager - Data Issues</frx:category>
+    <frx:options/>
+    <frx:fields>
+  <frx:field id="bib_id"/>
+  <frx:field id="mfhd_id"/>
+  <frx:field id="item_id"/>
+  <frx:field id="mfhd"/>
+  <frx:field id="item"/>
+  <frx:field id="e" link="e" format="e" format-string="e" target="e" rel="e" class="e" add-query="e">e</frx:field>
+</frx:fields>
+    <frx:parameters>
+  <frx:parm id="location_id" label="Location" require="1" desc="Select the Holdings Location to check for mismatched items." data_source="voyager-prod/lookup-voyager-locations" type="select"/>
+</frx:parameters>
+    <frx:docgen/>
+  <frx:menu type="normal-item"/><style/></head>
+  <body>
+  <h3 id="lookup-voyager-locations_block" class="FrxTable" frx:foreach="*" frx:block="voyager-prod/list-voyager-locations">Location: {location_name}</h3>
+  <div><a href="holding-item-location-discrepancies-summary">Check other locations</a></div>
+  <div id="holding-item-location-discrepancies-list_block" class="FrxTable" frx:block="voyager-cataloging/holding-item-location-discrepancies-list">
+    <table>
+      <thead>
+        <tr>
+          <th>BIB Id</th>
+          <th>MFHD Id</th>
+          <th>Item Id</th>
+          <th>Holding Location</th>
+          <th>Item Location</th></tr></thead>
+      <tbody>
+        <tr id="holding-item-location-discrepancies-list" frx:foreach="*">
+          <td>{bib_id}</td>
+          <td>{mfhd_id}</td>
+          <td>{item_id}</td>
+          <td>{mfhd}</td>
+          <td>{item}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="holding-item-location-discrepancies-count" frx:foreach="*" frx:block="voyager-cataloging/holding-item-location-discrepancies-count"> Total: {errors} errors.</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Rapid Locations</title>
+    <frx:category>Voyager - Assessment and External Reporting</frx:category>
+    <frx:options/>
+    <frx:fields/>
+    <frx:parameters>
+  <frx:parm id="service_code" label="Rapid Service" require="1" desc="Select the Rapid Service type." data_source="voyager-circ-trans/rapid-services" data_field="service_type" label_field="service_description" type="select"/>
+  
+</frx:parameters>
+    <frx:docgen>
+  <frx:doc type="csv"/>
+  <frx:doc type="html"/>
+  <frx:doc type="doc"/>
+  <frx:doc type="xls"/>
+</frx:docgen>
+  <frx:menu/><style>table {&#13;
+	font-family: verdana,arial,sans-serif;&#13;
+	font-size:11px;&#13;
+	color:#333333;&#13;
+	border-width: 1px;&#13;
+	border-color: #666666;&#13;
+	border-collapse: collapse;&#13;
+}&#13;
+th {&#13;
+	border-width: 1px;&#13;
+	padding: 8px;&#13;
+	border-style: solid;&#13;
+	border-color: #666666;&#13;
+	background-color: #cecece;&#13;
+}&#13;
+td {&#13;
+	border-width: 1px;&#13;
+	padding: 8px;&#13;
+	border-style: solid;&#13;
+	border-color: #666666;&#13;
+	background-color: #ffffff;&#13;
+}&#13;
+&#13;
+tr.odd td {&#13;
+        background-color: #eeeeee;&#13;
+}&#13;
+&#13;
+tr.even td {&#13;
+}</style><frx:cache/><frx:description/><meta content="Lists the locations assigned to a Rapid service, by service type.  The output of this report is intended for upload to Rapid as part of refreshing holdings." name="description"/></head>
+  <body>
+<div id="rapid-service" frx:block="voyager-circ-trans/rapid-service" frx:foreach="*"><h2 id="forena-report-header"> {service_description} Locations</h2><span style="display:none" frx:renderer="FrxTitle"> {service_description} Locations</span></div>
+<div id="rapid-locations_block" class="FrxTable" frx:block="voyager-circ-trans/rapid-locations">
+    <table>
+      <thead>
+        <tr>
+          <th>Location code</th>
+          <th>Display Name</th>
+          <th>Branch</th>
+          <th>Material type</th>
+          <th>Lending location</th></tr></thead>
+      <tbody>
+        <tr id="rapid-locations" frx:foreach="*">
+          <td>{location_code}</td>
+          <td>{location_display_name}</td>
+          <td>{library_display_name}</td>
+          <td>{material_type}</td>
+          <td>{loan}</td></tr>
+      </tbody>
+    </table>
+  </div>
+ 
+</body>
+</html>

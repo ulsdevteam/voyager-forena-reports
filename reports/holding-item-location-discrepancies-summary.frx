@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Summary of Holding vs. Item Location Discrepancies</title>
+    <frx:category>Voyager - Data Issues</frx:category>
+    <frx:options/>
+    <frx:fields>
+  <frx:field id="location_key" link="reports/holding-item-location-discrepancies-list?location_id={location_id}"/>
+  <frx:field id="item_count" format="number"/>
+  <frx:field id="item_discrepancy" format="number"/>
+  <frx:field id="discrepancy_percent" format="number" format-string="99.99"/>
+  <frx:field id="e" link="e" format="e" format-string="e" target="e" rel="e" class="e" add-query="e">e</frx:field>
+
+
+</frx:fields>
+    <frx:parameters/>
+    <frx:docgen/>
+  <frx:menu type="normal-item"/><style/></head>
+  <body>
+
+  <div id="holding-item-location-discrepancies-summary_block" class="FrxTable" frx:block="voyager-cataloging/holding-item-location-discrepancies-summary">
+    <table>
+      <thead>
+        <tr>
+          <th>Location</th>
+          <th>Item count</th>
+          <th>Discrepancy</th>
+          <th>Percent</th></tr></thead>
+      <tbody>
+        <tr id="holding-item-location-discrepancies-summary" frx:foreach="*">
+          <td>{location_key}</td>
+          <td>{item_count}</td>
+          <td>{item_discrepancy}</td>
+          <td>{discrepancy_percent}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Items by Publisher Location</title>
+<meta content="BIBs, MFHDs, and Item counts by Publisher Location, according to MARC 008/15-17." name="description"/>
+<frx:category>Voyager - General Reports</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="marc_countries" label="MARC Countries" require="1" data_source="voyager-prod/lookups/marc-countries" data_field="country_code" label_field="country_text" type="multiselect" class="huge-selector"/>
+  <frx:parm id="include_invalid" label="Include Invalid 008 codes" type="checkbox">Y</frx:parm>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+
+  <frx:field id="bibs" format="number" format-string=","/>
+
+
+  <frx:field id="mfhds" format="number" format-string=","/>
+
+  <frx:field id="items" format="number" format-string=","/>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/></head>
+<body>
+<div id="items-by-pub-location_block" class="FrxTable" frx:block="voyager-prod/items-by-pub-location">Suppressed BIBs and MFHDs are excluded.  Lost/Missing/Withdrawn items are excluded.  All locations, across all library systems are included.  BIBs without MFHDs, and MFHDs without holdings, are included (for example, electronic records).  If "invalid 008 codes" are included, any code in the 008/15-17 which is missing, "|||" filled, or not a known MARC country code will be grouped on a line with blank Country Name, Region, and Code.
+    <table>
+      <thead>
+        <tr>
+          <th>Country Code</th>
+          <th>Country Name</th>
+          <th>Country Region</th>
+          <th>BIBs</th>
+          <th>MFHDs</th>
+          <th>Items</th></tr></thead>
+      <tbody>
+        <tr id="items-by-pub-location" frx:foreach="*">
+          <td>{country_code}</td>
+          <td>{country_name}</td>
+          <td>{country_region}</td>
+          <td>{bibs}</td>
+          <td>{mfhds}</td>
+          <td>{items}</td></tr></tbody></table></div></body>
+</html>

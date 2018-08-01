@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Lost Items and Fines by Date Range</title>
+<frx:category>Voyager - Circulation</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="begin_date" type="date_popup"/>
+  <frx:parm id="end_date" type="date_popup"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/><meta content="Report showing the items that have had a lost status applied and/or Voyager patron account owing $35.00 or more during the specified date range. Columns show patron ID number, last/first/middle name of patron account, patron barcode number, patron group, total balance, new balance, date lost status applied, and which Voyager patron accounts have lost items in addition to fines exceeding $35.00. " name="description"/></head>
+<body>
+<div id="lost-and-fines-for-bursar_block" class="FrxTable" frx:block="voyager-circ-finefee/lost-and-fines-for-bursar">
+<p>Report showing the items that have had a lost status applied and/or Voyager patron account owing $35.00 or more during the specified date range. Columns show patron ID number, last/first/middle name of patron account, patron barcode number, patron group, total balance, new balance, date lost status applied, and which Voyager patron accounts have lost items in addition to fines exceeding $35.00.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Patron ID</th>
+          <th>Last Name</th>
+          <th>First Name</th>
+          <th>Middle Name</th>
+          <th>Patron Barcode</th>
+          <th>patron group name</th>
+          <th>Total Balance</th>
+          <th>New Balance</th>
+          <th>Create Date</th>
+          <th>Lost Items</th></tr></thead>
+      <tbody>
+        <tr id="lost-and-fines-for-bursar" frx:foreach="*">
+          <td>{patron_id}</td>
+          <td>{last_name}</td>
+          <td>{first_name}</td>
+          <td>{middle_name}</td>
+          <td>{patron_barcode}</td>
+          <td>{patron_group_name}</td>
+          <td>{total_balance}</td>
+          <td>{new_balance}</td>
+          <td>{create_date}</td>
+          <td>{lost_items}</td></tr></tbody></table></div></body>
+</html>

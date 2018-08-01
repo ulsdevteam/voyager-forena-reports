@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Circ transaction data for a specific item barcode - Active and Archived</title>
+<frx:category>Voyager - Circulation</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="itembarcode" label="Enter valid Item Barcode. e.g. 31735046733733"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/><meta content="Transaction history for specific item including columns for archived, active, and renewal information with dates and locations of actions. " name="description"/></head>
+<body>
+<div id="circmenu_13-itembarcode_block" class="FrxTable" frx:block="voyager-circ-trans/circmenu_13-itembarcode">
+<p>Transaction history for specific item including columns for archived, active, and renewal information with dates and locations of actions.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>type of trans</th>
+          <th>item id</th>
+          <th>item barcode</th>
+          <th>item barcode status</th>
+          <th>circ policy group</th>
+          <th>patron group</th>
+          <th>item type</th>
+          <th>ctachgdate</th>
+          <th>charge loc</th>
+          <th>charge type</th>
+          <th>charge operid</th>
+          <th>due date</th>
+          <th>discharge date</th>
+          <th>discharge loc</th>
+          <th>discharge type</th>
+          <th>discharge operid</th>
+          <th>renew count</th>
+          <th>recall date</th>
+          <th>recall due date</th>
+          <th> recall notice count</th>
+          <th>recall notice date</th>
+          <th>overdue notice count</th>
+          <th>overdue notice date</th>
+          <th>over-recall notice count</th>
+          <th>over-recall notice date</th>
+          <th>patrin id</th>
+          <th>patron id proxy</th>
+          <th>courtesy notice date</th>
+          <th>circ tran id</th>
+          <th>current due date</th>
+          <th>title</th></tr></thead>
+      <tbody>
+        <tr id="circmenu_13-itembarcode" frx:foreach="*">
+          <td>{type of trans}</td>
+          <td>{item id}</td>
+          <td>{item barcode}</td>
+          <td>{item barcode status}</td>
+          <td>{circ policy group}</td>
+          <td>{patron group}</td>
+          <td>{item type}</td>
+          <td>{ctachgdate}</td>
+          <td>{charge loc}</td>
+          <td>{charge type}</td>
+          <td>{charge operid}</td>
+          <td>{due date}</td>
+          <td>{discharge date}</td>
+          <td>{discharge loc}</td>
+          <td>{discharge type}</td>
+          <td>{discharge operid}</td>
+          <td>{renew count}</td>
+          <td>{recall date}</td>
+          <td>{recall due date}</td>
+          <td>{ recall notice count}</td>
+          <td>{recall notice date}</td>
+          <td>{overdue notice count}</td>
+          <td>{overdue notice date}</td>
+          <td>{over-recall notice count}</td>
+          <td>{over-recall notice date}</td>
+          <td>{patrin id}</td>
+          <td>{patron id proxy}</td>
+          <td>{courtesy notice date}</td>
+          <td>{circ tran id}</td>
+          <td>{current due date}</td>
+          <td>{title}</td></tr></tbody></table></div></body>
+</html>

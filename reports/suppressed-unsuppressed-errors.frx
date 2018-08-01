@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Suppressed Record Errors</title>
+    <frx:category>Voyager - Data Issues</frx:category>
+    <frx:options/>
+    <frx:fields/>
+    <frx:parameters/>
+    <frx:docgen/>
+  </head>
+  <body>
+
+  </body>
+</html>

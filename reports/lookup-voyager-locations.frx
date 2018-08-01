@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Voyager Locations lookup</title>
+    <frx:category>Lookups</frx:category>
+    <frx:options hidden="1"/>
+    <frx:fields/>
+    <frx:parameters/>
+    <frx:docgen/>
+  </head>
+  <body>
+
+  <div id="lookup-voyager-locations_block" class="FrxTable" frx:block="voyager-prod/lookup-voyager-locations">
+    <table>
+      <thead>
+        <tr>
+          <th>location_id</th>
+          <th>location_name</th></tr></thead>
+      <tbody>
+        <tr id="lookup-voyager-locations" frx:foreach="*">
+          <td>{location_id}</td>
+          <td>{location_name}</td></tr></tbody></table></div></body>
+</html>

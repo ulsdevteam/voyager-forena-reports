@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Junk</title>
+    <frx:category/>
+    <frx:options/>
+    <frx:fields/>
+    <frx:parameters>
+  <frx:parm id="junk2" label="Junk"/>
+</frx:parameters>
+    <frx:docgen/>
+  </head>
+  <body>
+
+  <div id="acquisitions-profiles_block" class="FrxTable" frx:block="voyager-prod/acquisitions-profiles">
+    <table>
+      <thead>
+        <tr>
+          <th>acq_profile_name</th>
+          <th>first_name</th>
+          <th>last_name</th>
+          <th>operator_id</th>
+          <th>order_add_update</th>
+          <th>receive</th>
+          <th>order_delete</th>
+          <th>order_view_only</th>
+          <th>order_approve</th>
+          <th>serial_checkin</th>
+          <th>serials_view_only</th>
+          <th>pattern_add_update</th>
+          <th>pattern_view_only</th>
+          <th>pattern_delete</th>
+          <th>item_add_update</th>
+          <th>item_delete</th>
+          <th>item_view_only</th>
+          <th>mono_claims</th>
+          <th>serial_claims</th>
+          <th>problems_claims_view_only</th>
+          <th>change_line_item_bib</th>
+          <th>hold_ignore_ownership</th>
+          <th>vendor_add_update</th>
+          <th>vendor_delete</th>
+          <th>vendor_view_only</th>
+          <th>ledger_add_update</th>
+          <th>ledger_view_only</th>
+          <th>ledger_delete</th>
+          <th>change_fund_alloc</th>
+          <th>fiscal_close</th>
+          <th>currency_maintenance</th>
+          <th>edi_incoming</th>
+          <th>edi_outgoing</th>
+          <th>modify_edi_outgoing</th>
+          <th>invoice_add_update</th>
+          <th>invoice_view_only</th>
+          <th>invoice_delete</th>
+          <th>invoice_approve</th>
+          <th>bind_view_vol_issue</th>
+          <th>bind_edit_vol</th>
+          <th>bind_edit_issue</th>
+          <th>bind_print</th>
+          <th>override_expend</th>
+          <th>override_commit</th></tr></thead>
+      <tbody>
+        <tr id="acquisitions-profiles" frx:foreach="*">
+          <td>{acq_profile_name}</td>
+          <td>{first_name}</td>
+          <td>{last_name}</td>
+          <td>{operator_id}</td>
+          <td>{order_add_update}</td>
+          <td>{receive}</td>
+          <td>{order_delete}</td>
+          <td>{order_view_only}</td>
+          <td>{order_approve}</td>
+          <td>{serial_checkin}</td>
+          <td>{serials_view_only}</td>
+          <td>{pattern_add_update}</td>
+          <td>{pattern_view_only}</td>
+          <td>{pattern_delete}</td>
+          <td>{item_add_update}</td>
+          <td>{item_delete}</td>
+          <td>{item_view_only}</td>
+          <td>{mono_claims}</td>
+          <td>{serial_claims}</td>
+          <td>{problems_claims_view_only}</td>
+          <td>{change_line_item_bib}</td>
+          <td>{hold_ignore_ownership}</td>
+          <td>{vendor_add_update}</td>
+          <td>{vendor_delete}</td>
+          <td>{vendor_view_only}</td>
+          <td>{ledger_add_update}</td>
+          <td>{ledger_view_only}</td>
+          <td>{ledger_delete}</td>
+          <td>{change_fund_alloc}</td>
+          <td>{fiscal_close}</td>
+          <td>{currency_maintenance}</td>
+          <td>{edi_incoming}</td>
+          <td>{edi_outgoing}</td>
+          <td>{modify_edi_outgoing}</td>
+          <td>{invoice_add_update}</td>
+          <td>{invoice_view_only}</td>
+          <td>{invoice_delete}</td>
+          <td>{invoice_approve}</td>
+          <td>{bind_view_vol_issue}</td>
+          <td>{bind_edit_vol}</td>
+          <td>{bind_edit_issue}</td>
+          <td>{bind_print}</td>
+          <td>{override_expend}</td>
+          <td>{override_commit}</td></tr></tbody></table></div></body>
+</html>

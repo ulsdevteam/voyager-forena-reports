@@ -1,0 +1,12 @@
+--ACCESS=access content
+select 
+	count(case when library_id = '1' then library_id end) TotBibBrad,
+	count(case when library_id = '5' then library_id end)TotBibGre,
+	count(case when library_id = '10' then library_id end) TotBibHSLS,
+	count(case when library_id = '6' then library_id end) TotBibJohn,
+	count(case when library_id = '7' then library_id end) TotBibLaw,
+	count(case when library_id = '9' then library_id end) TotBibTitus,
+	count(case when library_id = '2' then library_id end) TotBibULS,
+	count(case when library_id = '8' then library_id end) TotBibssea
+	from pittdb.bib_master
+        where to_char(create_date, 'yyyy/mm/dd') between :startdate and :enddate

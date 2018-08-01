@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Fine/Fee - Patron Transactions by Date Range and location</title>
+<frx:category>Voyager - Circulation</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="circ_location" label="Circulation Location" require="1" desc="Select Circulation Location/s Desired." data_source="voyager-prod/lookup-voyager-circ-locations" type="multiselect"/>
+  <frx:parm id="transdate_start" label="Begining Date" require="1" type="date_popup"/>
+  <frx:parm id="transdate_end" label="Ending Date" require="1" type="date_popup"/>
+</frx:parameters>
+<frx:docgen>
+  <frx:doc type="csv"/>
+  <frx:doc type="html"/>
+  <frx:doc type="doc"/>
+  <frx:doc type="xls"/>
+  <frx:doc type="xml"/>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/><meta content="Report showing all payments for a specific location noting fine/fee description, item barcode, location of check-out, operator ID, transaction description (posting type), method of payment, payment amount. " name="description"/></head>
+<body>
+<div id="circmenu_1_block" class="FrxTable" frx:block="voyager-circ-finefee/circmenu_1">
+<p>Report showing all payments for a specific location noting fine/fee description, item barcode, location of check-out, operator ID, transaction description (posting type), method of payment, payment amount. </p>
+    <table>
+      <thead>
+        <tr>
+          <th>transdate</th>
+          <th>lastname</th>
+          <th>firstname</th>
+          <th>middlename</th>
+          <th>fine fee desc</th>
+          <th>item barcode</th>
+          <th>location code</th>
+          <th>operator id</th>
+          <th>transaction desc</th>
+          <th>method desc</th>
+          <th>ammount</th></tr></thead>
+      <tbody>
+        <tr id="circmenu_1" frx:foreach="*">
+          <td>{transdate}</td>
+          <td>{lastname}</td>
+          <td>{firstname}</td>
+          <td>{middlename}</td>
+          <td>{fine_fee_desc}</td>
+          <td>{item_barcode}</td>
+          <td>{location_code}</td>
+          <td>{operator_id}</td>
+          <td>{transaction_desc}</td>
+          <td>{method_desc}</td>
+          <td>{ammount}</td></tr></tbody></table></div></body>
+</html>

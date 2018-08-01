@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Circulation Profiles</title>
+    <frx:category>Voyager - Profiles - Circulation</frx:category>
+    <frx:options/>
+    <frx:fields/>
+    <frx:parameters/>
+    <frx:docgen>
+  <frx:doc type="csv"/>
+  <frx:doc type="html"/>
+  <frx:doc type="doc"/>
+  <frx:doc type="xls"/>
+  <frx:doc type="xml"/>
+</frx:docgen>
+  <frx:menu type="normal-item"/><style>table {&#13;
+                font-family: verdana,arial,sans-serif;&#13;
+                font-size:11px;&#13;
+                color:#333333;&#13;
+                border-width: 1px;&#13;
+                border-color: #666666;&#13;
+                border-collapse: collapse;&#13;
+}&#13;
+th {&#13;
+                border-width: 1px;&#13;
+                padding: 8px;&#13;
+                border-style: solid;&#13;
+                border-color: #666666;&#13;
+                background-color: #cecece;&#13;
+}&#13;
+td {&#13;
+                border-width: 1px;&#13;
+                padding: 8px;&#13;
+                border-style: solid;&#13;
+                border-color: #666666;&#13;
+                background-color: #ffffff;&#13;
+}&#13;
+&#13;
+tr.odd td {&#13;
+        background-color: #eeeeee;&#13;
+}&#13;
+&#13;
+tr.even td {&#13;
+}&#13;
+</style><frx:description/><meta content="A List of Circulation Profiles, Operators and associated permission settings. These settings can be found in the Voyager System Administration client under Security - Circulation Profiles." name="description"/></head>
+  <body>
+<p>A List of Circulation Profiles, Operators and associated permission settings. These settings can be found in the Voyager System Administration client under Security - Circulation Profiles.</p>
+
+  <div id="circulation-profiles_block" class="FrxTable" frx:block="voyager-prod/circulation-profiles">
+    <table>
+      <thead>
+        <tr>
+          <th>Profile Name</th>
+          <th>Operator First Name</th>
+          <th>Operator Last Name</th>
+          <th>Operator ID</th>
+          <th>Charge/Renew</th>
+          <th>Discharge</th>
+          <th>Add/Update Recall/Hold Requests</th>
+          <th>Add/Update Item Records</th>
+          <th>Add/Update Fines/Fees</th>
+          <th>Accept Payments</th>
+          <th>Add/Update Patron Records</th>
+          <th>Update PINs</th>
+          <th>Delete Patron Records</th>
+          <th>Add/Update Proxy Patron</th>
+          <th>Attach Holdings to Any Bibliographic Record</th>
+          <th>Delete Item Records</th>
+          <th>Change Due Date</th>
+          <th>Backdata Due Date/Time at Discharge</th>
+          <th>Mask Patron Social Security Number</th>
+          <th>Resequence Recall/Hold Request Queues</th>
+          <th>Set/Change Item Status</th>
+          <th>Forgive/Error/Refund Fines/Fees</th>
+          <th>Process Course Reserve</th>
+          <th>View-Only Patron Records</th>
+          <th>Reset Patron Counters</th>
+          <th>Edit Stub Patrons</th>
+          <th>Manually Map Patrons</th>
+          <th>View Patron Info in Item Circulation History</th>
+          <th>Distribute Item - View</th>
+          <th>Distribute Item - Distribute</th>
+          <th>Distribute Item - Create</th>
+          <th>Distribute Item - Update</th>
+          <th>Distribute Item - Order</th>
+          <th>Distribute Item - Receive</th>
+          <th>Distribute Item - Delete</th>
+         </tr>
+      </thead>
+      <tbody>
+        <tr id="circulation-profiles" frx:foreach="*">
+          <td style="white-space:nowrap">{circ_profile_name}</td>
+          <td style="white-space:nowrap">{first_name}</td>
+          <td style="white-space:nowrap">{last_name}</td>
+          <td style="text-align:center">{operator_id}</td>
+          <td style="text-align:center">{charge_renew}</td>
+          <td style="text-align:center">{discharge}</td>
+          <td style="text-align:center">{recahold_add_update}</td>
+          <td style="text-align:center">{item_add_update}</td>
+          <td style="text-align:center">{add_fines}</td>
+          <td style="text-align:center">{pay_fines}</td>
+          <td style="text-align:center">{patron_add_update}</td>
+          <td style="text-align:center">{update_pin}</td>
+          <td style="text-align:center">{patron_delete}</td>
+          <td style="text-align:center">{patron_proxy_maintain}</td>
+          <td style="text-align:center">{hold_ignore_ownership}</td>
+          <td style="text-align:center">{item_delete}</td>
+          <td style="text-align:center">{change_due_date}</td>
+          <td style="text-align:center">{change_discharge_date}</td>
+          <td style="text-align:center">{patron_mask_ssn}</td>
+          <td style="text-align:center">{recahold_resequence}</td>
+          <td style="text-align:center">{item_status}</td>
+          <td style="text-align:center">{forgive_fines}</td>
+          <td style="text-align:center">{reserve_add_update}</td>
+          <td style="text-align:center">{patron_view_only}</td>
+          <td style="text-align:center">{patron_counters}</td>
+          <td style="text-align:center">{edit_stub_patron}</td>
+          <td style="text-align:center">{manually_map_patron}</td>
+          <td style="text-align:center">{view_patron_circ_history}</td>
+          <td style="text-align:center">{distribution_item_view}</td>
+          <td style="text-align:center">{distribution_item_distribute}</td>
+          <td style="text-align:center">{distribution_item_create}</td>
+          <td style="text-align:center">{distribution_item_update}</td>
+          <td style="text-align:center">{distribution_item_order}</td>
+          <td style="text-align:center">{distribution_item_receive}</td>
+          <td style="text-align:center">{distribution_item_delete}</td>
+        </tr>
+       </tbody>
+     </table>
+   </div>
+</body>
+</html>

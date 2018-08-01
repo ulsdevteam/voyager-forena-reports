@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Pending Invoices</title>
+<meta content="List of Pending Expeditures/Invoices" name="description"/>
+<frx:category>Voyager - Acquisitions</frx:category>
+<frx:options/>
+<frx:parameters>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+
+  <frx:field id="invoice_total" format="curency" format-string="en_US %n"/>
+
+
+  <frx:field id="line item subtotal" format="currency" format-string="en_US %n"/>
+
+
+
+
+
+
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/></head>
+<body>
+<div id="pending-invoices_block" class="FrxTable" frx:block="voyager-acquisitions/pending-invoices">
+<p>List of Pending Expeditures/Invoices</p>
+    <table>
+      <thead>
+        <tr>
+          <th>owning library</th>
+          <th>billing location</th>
+          <th>vendor</th>
+          <th>invoice number</th>
+          <th>invoice status date</th>
+          <th>invoice qty</th>
+          <th>invoice total</th>
+          <th>adjustments subtotal</th>
+          <th>line item count</th>
+          <th>line item subtotal</th></tr></thead>
+      <tbody>
+        <tr id="pending-invoices" frx:foreach="*">
+          <td>{owning_library}</td>
+          <td>{billing_location}</td>
+          <td>{vendor}</td>
+          <td>{invoice_number}</td>
+          <td>{invoice_status_date}</td>
+          <td>{invoice_qty}</td>
+          <td>{invoice_total}</td>
+          <td>{adjustments_subtotal}</td>
+          <td>{line_item_count}</td>
+          <td>{line item subtotal}</td></tr></tbody></table></div></body>
+</html>

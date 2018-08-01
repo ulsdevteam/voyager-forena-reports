@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Items possibly missing in transit by Date Range</title>
+<frx:category>Voyager - Circulation</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="start_date" require="1" type="date_popup"/>
+  <frx:parm id="end_date" require="1" type="date_popup"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/><meta content="Report showing items that have an active/current in transit status  applied during the period specified. The report contains the item temp location (if any), permanent location, call number, holding location, item ID, item barcode, item status, date in transit status applied, discharge location, discharge date, discharge operator.  &#13;&#10; If items are not found staff add the missing status via Voyager item record." name="description"/></head>
+<body>
+<div id="circmenu_11_block" class="FrxTable" frx:block="voyager-prod/circmenu_11">
+<p>Report showing items that have an active/current in transit status  applied during the period specified. The report contains the item temp location (if any), permanent location, call number, holding location, item ID, item barcode, item status, date in transit status applied, discharge location, discharge date, discharge operator.  If items are not found staff add the missing status via Voyager item record.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>item temp loc</th>
+          <th>item perm loc</th>
+          <th>mfhd call number</th>
+          <th>mfhd loc</th>
+          <th>item id</th>
+          <th>item barcode</th>
+          <th>item status</th>
+          <th>item status date</th>
+          <th>discharge loc</th>
+          <th>discharge date</th>
+          <th>discharge oper id</th>
+          <th>discharge type</th>
+          <th>title brief</th>
+          <th>tray address #</th></tr></thead>
+      <tbody>
+        <tr id="circmenu_11" frx:foreach="*">
+          <td>{item temp loc}</td>
+          <td>{item perm loc}</td>
+          <td>{mfhd call number}</td>
+          <td>{mfhd loc}</td>
+          <td>{item id}</td>
+          <td>{item barcode}</td>
+          <td>{item status}</td>
+          <td>{item status date}</td>
+          <td>{discharge loc}</td>
+          <td>{discharge date}</td>
+          <td>{discharge oper id}</td>
+          <td>{discharge type}</td>
+          <td>{title brief}</td>
+          <td>{tray address}</td></tr></tbody></table></div></body>
+</html>

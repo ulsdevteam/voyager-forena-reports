@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Shelflist/Inventory/Weeding by Location and Call Number</title>
+    <frx:category>Voyager - General Reports</frx:category>
+    <frx:options/>
+    <frx:fields/>
+    <frx:parameters>
+  <frx:parm id="location_list" label="Location List" require="1" desc="You can select multiple locations, however, selecting one location at a time works best." data_source="voyager-prod/lookup-voyager-locations" data_field="location_id" label_field="location_name" type="multiselect" class="huge-selector"/>
+  <frx:parm id="start_call" label="Start Call Number" desc="Voyager Normalized, e.g.: PQ 1301 A 589" type="textfield" class="normalizeCallNumber"/>
+  <frx:parm id="end_call" label="End Call Number" desc="Voyager Normalized, e.g.: PQ 1301 A 589" type="textfield" class="normalizeCallNumber"/>
+  <frx:parm id="include_missing_callno" label="Include Items with Missing Call Numbers" desc="Select if you want to include items in the location(s) with missing call numbers" type="checkbox">N</frx:parm>
+</frx:parameters>
+    <frx:docgen>
+  <frx:doc type="csv"/>
+  <frx:doc type="html"/>
+  <frx:doc type="doc"/>
+  <frx:doc type="xls"/>
+</frx:docgen>
+  <frx:menu/><style>table {&#13;
+	font-family: verdana,arial,sans-serif;&#13;
+	font-size:11px;&#13;
+	color:#333333;&#13;
+	border-width: 1px;&#13;
+	border-color: #666666;&#13;
+	border-collapse: collapse;&#13;
+}&#13;
+th {&#13;
+	border-width: 1px;&#13;
+	padding: 8px;&#13;
+	border-style: solid;&#13;
+	border-color: #666666;&#13;
+	background-color: #cecece;&#13;
+}&#13;
+td {&#13;
+	border-width: 1px;&#13;
+	padding: 8px;&#13;
+	border-style: solid;&#13;
+	border-color: #666666;&#13;
+	background-color: #ffffff;&#13;
+}&#13;
+&#13;
+tr.odd td {&#13;
+        background-color: #eeeeee;&#13;
+}&#13;
+&#13;
+tr.even td {&#13;
+}</style><frx:cache duration="+15 minutes"/><frx:description/><meta content="Currently used daily." name="description"/></head>
+  <body>
+
+  <div id="shelflist-by-location-and-callno_block" class="FrxTable" frx:block="voyager-prod/shelflist-by-location-and-callno">
+    <table>
+      <thead>
+        <tr>
+          <th>Location</th>
+          <th>Normalized Call No.</th>
+          <th>Display Call No.</th>
+          <th>Enum</th>
+          <th>Chron</th>
+          <th>Year</th>
+          <th>Copy</th>
+          <th>Barcode</th>
+          <th>Publication Date</th>
+          <th>Title (brief)</th>
+          <th>Author</th>
+          <th>Edition</th>
+          <th>Historical Charges</th>
+          <th>Historical Browses</th>
+          <th>Last Charged</th>
+          <th>Item Status</th>
+          <th>Item Status Date</th>
+          <th>mfhd_location</th>
+          <th>item_id</th>
+          <th>mfhd_id</th>
+          <th>bib_id</th></tr></thead>
+      <tbody>
+        <tr id="shelflist-by-location-and-callno" frx:foreach="*">
+          <td>{item_location}</td>
+          <td>{normalized_call_no}</td>
+          <td>{display_call_no}</td>
+          <td>{item_enum}</td>
+          <td>{chron}</td>
+          <td>{year}</td>
+          <td>{copy_number}</td>
+          <td>'{item_barcode}'</td>
+          <td>{begin_pub_date}</td>
+          <td>{title_brief}</td>
+          <td>{author}</td>
+          <td>{edition}</td>
+          <td>{historical_charges}</td>
+          <td>{historical_browses}</td>
+          <td>{last_charged}</td>
+          <td>{item_status_desc}</td>
+          <td>{item_status_date}</td>
+          <td>{mfhd_location}</td>
+          <td>{item_id}</td>
+          <td>{mfhd_id}</td>
+          <td>{bib_id}</td></tr></tbody></table></div></body>
+</html>

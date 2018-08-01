@@ -1,0 +1,27 @@
+SELECT
+	TO_CHAR(i.item_id)||TO_CHAR(cv.charge_date_time, 'YYYYMMDDHH24MISS') row_id,
+	cv.charge_date_time,
+	cv.charge_location_name,
+	DECODE(cv.patron_group_name, 'PhDissertation', 'UPGrad', 'UP Grad Law', 'UPGrad', 'UPfacLaw', 'UPFac', cv.patron_group_name) patron_group_name,
+	CASE WHEN m.call_no_type = '0' THEN REGEXP_REPLACE(m.normalized_call_no, ' .*', '') WHEN m.normalized_call_no LIKE 'BD-%' OR m.normalized_call_no LIKE 'CD %' OR m.normalized_call_no LIKE 'DVD-%' OR m.normalized_call_no LIKE 'DVD %' OR m.normalized_call_no LIKE 'V-%' OR m.normalized_call_no LIKE 'VIDEORECORDING %' THEN 'A/V Material' ELSE 'Unclassified' END call_no_prefix,
+	bt.title_brief,
+	pl.location_display_name perm_location,
+	tl.location_display_name temp_location,
+	mi.item_enum,
+	mi.chron
+FROM
+	circcharges_vw cv JOIN
+	item i ON (cv.item_id = i.item_id) JOIN
+	mfhd_master m ON (cv.mfhd_id = m.mfhd_id) JOIN
+	mfhd_item mi ON (cv.mfhd_id = mi.mfhd_id AND cv.item_id = mi.item_id) JOIN
+	bib_text bt ON (cv.bib_id = bt.bib_id) JOIN
+	bib_master bm ON (cv.bib_id = bm.bib_id) JOIN
+	location pl ON (i.perm_location = pl.location_id) LEFT OUTER JOIN
+	location tl ON (i.temp_location = tl.location_id)
+WHERE
+	cv.charge_date_time BETWEEN TO_DATE(:start_date) and TO_DATE(:end_date) + 1 AND
+	cv.charge_location_code NOT IN ('wpicavCI','chpCI','falkmCI','falkCI','hillillCI','wpicCI','palciCI','shadCI') AND
+	cv.patron_group_name NOT IN ('ILL') AND
+	(tl.location_code IS NULL OR tl.location_code NOT IN ('pymares','titusres','bradres','artres','eehres','falkmres','wpicres','greeres','falkcres','nursres','falkres','gsphres','johnres','lawres','hillres','sseares','chemresa','compresa','physresa','musresc','musresd','chemresc','chemresd','compresc','compresd','engresa','engresc','engresd','langresa','langresc','mathresc','mathresd','musresb','physresc','physresd','engresb','langresb','mathresa','musclos','musresa','shadresn','ereserves','chemresb','compresb','langresd','mathresb','physresb','ucirres','falkrese','wpicrese')) AND
+	bm.suppress_in_opac = 'N' AND
+	m.suppress_in_opac = 'N'

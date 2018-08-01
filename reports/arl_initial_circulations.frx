@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>ARL Initial Circulations</title>
+<meta content="ARL Statistics Questionnaire, Question 17: Initial circulations (excluding reserves)" name="description"/>
+<frx:category>Voyager - Assessment and External Reporting</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="FY_YEAR" label="Fiscal Year" desc="e.g. &quot;2018&quot; for July 2017 to June 2018" type="textfield"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+
+  <frx:field id="count" format="number" format-string=",."/>
+
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/></head>
+<body>
+<div id="arl-initial-circs_block" class="FrxTable" frx:block="voyager-statistics/arl-initial-circs"><p><b>Survey Instructions:</b> Count the number of initial circulations during the fiscal year from the general collection for use usually (although not always) outside the library.  Do not count renewals.  Exclude e-books.  Include circulations to and from remote storage facilities for library users (i.e. do not include transactions reflecting transfers or stages of technical processing).  Count the total number of items lent, not the number of borrowers.</p>
+<ul>
+<li>Fiscal Year is assumed to run July through June.</li>
+<li>Transactions for patrons of type "InLibrary" and "University Department" are excluded as these represent transfers or technical processing.</li>
+<li>Transactions for patrons of type "ILL" and "PALCI" are excluded as these represent circulations counted in another library's ARL Q22.</li>
+<li>Reserve transactions are identified by item types beginning with "Reserve"</li>
+<li>Items not considered to be part of the general collection are excluded by item types of "HL ER", "Misc Tech", containing "Equip", (equipment) or "PALCI" or "ILL" (other institution's collections).</li>
+</ul>
+<p>This report is based on circulation transaction history, and the association of the transaction to the circulation transaction matrix.  While it should be able to be run for arbitrary fiscal year, some drift will occur if the circulation transaction matrix is edited over time, or if the usage of named item types or patron groups changes over time.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Count</th>
+          <th>Library</th></tr></thead>
+      <tbody>
+        <tr id="arl-initial-circs" frx:foreach="*">
+          <td>{count}</td>
+          <td>{library}</td></tr></tbody></table></div></body>
+</html>

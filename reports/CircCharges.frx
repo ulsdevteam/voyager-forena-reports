@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Circulation Charges</title>
+<frx:category>Voyager - Assessment and External Reporting</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="start_date" label="Start Date" require="1" type="date_popup"/>
+  <frx:parm id="end_date" label="End Date" require="1" type="date_popup"/>
+</frx:parameters>
+<frx:docgen>
+  <frx:doc type="csv"/>
+  <frx:doc type="html"/>
+  <frx:doc type="xls"/>
+  <frx:doc type="xml"/>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache duration="+15 minutes"/>
+<style/>
+<frx:description/><meta content="Details circulation charges by date range for export and analysis by Assessment for the purpose of understanding usage load." name="description"/></head>
+<body>
+
+<div id="circulation-charges_block" class="FrxTable FrxTable" frx:block="voyager-statistics/circulation-charges"><p>Details "collection-related" circulation charges by date range for export and analysis by Assessment for the purpose of understanding usage load.</p>
+
+<p>Initial circulation charges are selected between the provided dates, inclusive.  Charge locations are excluded by location code, limiting to only ULS and Regional service desks.  Items currently on reserve are excluded by an enumeration of location codes.  Suppressed items are excluded in order to avoid reporting non-collection-related equipment charges.  Charges related to the patron group "ILL" are excluded.  Charges for items of type "equipment" are excluded.</p>
+
+<p>Call number prefix is the LC call number prefix, or a set of strings if the call number is not LC.</p>
+
+<p>All item information is as of the time of the report, so there will be a loss of data fidelity for historic runs.</p>
+
+  <table>
+      <thead>
+        <tr>
+          <th>Row Id</th>
+          <th>Charge Date/Time</th>
+          <th>Charge Location</th>
+          <th>Patron Group</th>
+          <th>Call No Prefix</th>
+          <th>Title</th>
+          <th>Perm Location</th>
+          <th>Temp Location</th>
+          <th>Item Enum</th>
+          <th>Chron</th></tr></thead>
+      <tbody>
+        <tr id="circulation-charges" frx:foreach="*">
+          <td>{row_id}</td>
+          <td>{charge_date_time}</td>
+          <td>{charge_location_name}</td>
+          <td>{patron_group_name}</td>
+          <td>{call_no_prefix}</td>
+          <td>{title_brief}</td>
+          <td>{perm_location}</td>
+          <td>{temp_location}</td>
+          <td>{item_enum}</td>
+          <td>{chron}</td></tr></tbody></table></div></body>
+</html>

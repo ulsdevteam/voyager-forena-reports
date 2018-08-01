@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Circmenu 7 Item Type Codes</title>
+    <frx:category/>
+    <frx:options/>
+    <frx:fields/>
+    <frx:parameters>
+  <frx:parm id="circ_loc" label="Circulation Location" require="1" data_source="voyager-prod/lookup-voyager-circ-locations" data_field="location_code" type="select"/>
+  <frx:parm id="transdate_start" label="Start Date" require="1" type="date_popup"/>
+  <frx:parm id="transdate_end" label="End Date" require="1" type="date_popup"/>
+</frx:parameters>
+    <frx:docgen/>
+  </head>
+  <body>
+
+  <div id="circmenu7-item_type-cd_block" class="FrxTable" frx:block="voyager-prod/circmenu7-item_type-cd">
+    <table>
+      <thead>
+        <tr>
+          <th>item_type_code</th>
+          <th>totals</th>
+          <th>location</th></tr></thead>
+      <tbody>
+        <tr id="circmenu7-item_type-cd" frx:foreach="*">
+          <td>{item_type_code}</td>
+          <td>{totals}</td>
+          <td>{location}</td></tr></tbody></table></div></body>
+</html>

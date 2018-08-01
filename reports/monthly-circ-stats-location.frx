@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Circ Stats - Ordered By Location</title>
+    <frx:category>Voyager - Circulation</frx:category>
+    <frx:options/>
+    <frx:fields>
+  <frx:field id="active_charges" format="sprintf" format-string="$%.2f"/>
+
+  <frx:field id="archive_charges" format="sprintf" format-string="$%.2f"/>
+
+  <frx:field id="total_charges" format="sprintf" format-string="$%.2f"/>
+
+  <frx:field id="total_charges_and_renewals" format="sprintf" format-string="$%.2f"/>
+</frx:fields>
+    <frx:parameters>
+  <frx:parm id="startdate" label="Start Date" require="1" type="date_popup"/>
+  <frx:parm id="enddate" label="End Date" require="1" type="date_popup"/>
+</frx:parameters>
+    <frx:docgen>
+  <frx:doc type="csv"/>
+  <frx:doc type="html"/>
+  <frx:doc type="doc"/>
+  <frx:doc type="xls"/>
+</frx:docgen>
+  <frx:menu/><style>table {&#13;
+        font-family: verdana,arial,sans-serif;&#13;
+        font-size:11px;&#13;
+        color:#333333;&#13;
+        border-width: 1px;&#13;
+        border-color: #666666;&#13;
+        border-collapse: collapse;&#13;
+}&#13;
+th {&#13;
+        border-width: 1px;&#13;
+        padding: 8px;&#13;
+        border-style: solid;&#13;
+        border-color: #666666;&#13;
+        background-color: #cecece;&#13;
+}&#13;
+td {&#13;
+        border-width: 1px;&#13;
+        padding: 8px;&#13;
+        border-style: solid;&#13;
+        border-color: #666666;&#13;
+        background-color: #ffffff;&#13;
+}&#13;
+&#13;
+tr.odd td {&#13;
+        background-color: #eeeeee;&#13;
+}&#13;
+&#13;
+tr.even td {&#13;
+}&#13;
+</style><frx:cache/><frx:description/><meta content="Circulation totals by location with separate columns for archived, active, and renewals." name="description"/></head>
+  <body>
+
+  <div id="lookup-voyager-Monthly-StartDate-EndDate_block" class="FrxTable FrxTable" frx:block="voyager-prod/lookup-voyager-Monthly-StartDate-EndDate">    
+  <p>  Circulation totals by location with separate columns for archived, active, and renewals.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>start date</th>
+          <th>end date</th></tr></thead>
+      <tbody>
+        <tr id="lookup-voyager-Monthly-StartDate-EndDate" frx:foreach="*">
+          <td>{start date}</td>
+          <td>{end date}</td></tr></tbody></table></div><div id="monthly-circ-stats-location_block" class="FrxTable" frx:block="voyager-circ-trans/monthly-circ-stats-location">
+    <table>
+      <thead>
+        <tr>
+          <th>Own Lib.</th>
+          <th>Location Code</th>
+          <th>Location Name</th>
+          <th>Location Display Name</th>
+          <th>Active Charges</th>
+          <th>Archive Charges</th>
+          <th>Total Charges</th>
+          <th>Active Renewals</th>
+          <th>Archive Renewals</th>
+          <th>Total Renewals</th>
+          <th>Total Charges and Renewals</th></tr></thead>
+      <tbody>
+        <tr id="monthly-circ-stats-location" frx:foreach="*">
+          <td>{own_lib}</td>
+          <td>{location_code}</td>
+          <td>{location_name}</td>
+          <td>{location_display_name}</td>
+          <td>{active_charges}</td>
+          <td>{archive_charges}</td>
+          <td>{total_charges}</td>
+          <td>{active_renewals}</td>
+          <td>{archive_renewals}</td>
+          <td>{total_renewals}</td>
+          <td>{total_charges_and_renewals}</td></tr></tbody></table></div></body>
+</html>

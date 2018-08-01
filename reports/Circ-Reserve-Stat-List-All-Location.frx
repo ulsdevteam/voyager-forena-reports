@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Circ Reserve Stats - List of all items per Circ Location</title>
+    <frx:category>Voyager - Circmenu</frx:category>
+    <frx:options/>
+    <frx:fields/>
+    <frx:parameters>
+  <frx:parm id="location_id" label="Circulation Location" require="1" data_source="voyager-prod/lookup-voyager-circ-locations-2" data_field="location_id" type="select"/>
+</frx:parameters>
+    <frx:docgen>
+  <frx:doc type="csv"/>
+  <frx:doc type="html"/>
+  <frx:doc type="doc"/>
+  <frx:doc type="xml"/>
+</frx:docgen>
+  </head>
+  <body>
+
+
+
+
+
+
+  
+
+
+
+</body>
+</html>

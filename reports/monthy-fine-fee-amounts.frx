@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Fine/Fee - Amounts by Payment Type and Date Range</title>
+    <frx:category>Voyager - Circulation</frx:category>
+    <frx:options/>
+    <frx:fields>
+  <frx:field id="start_date"/>
+
+  <frx:field id="cash" format="sprintf" format-string="$%.2f"/>
+
+  <frx:field id="total_payment_amount" format="sprintf" format-string="$%.2f"/>
+
+
+
+
+
+
+  <frx:field id="check" format="sprintf" format-string="$%.2f"/>
+
+  <frx:field id="voucher" format="sprintf" format-string="$%.2f"/>
+
+  <frx:field id="credit_card" format="sprintf" format-string="$%.2f"/>
+
+  <frx:field id="panther_funds" format="sprintf" format-string="$%.2f"/>
+</frx:fields>
+    <frx:parameters>
+  <frx:parm id="startdate" label="Starting Date" require="1" type="date_popup"/>
+  <frx:parm id="enddate" label="Ending Date" require="1" type="date_popup"/>
+</frx:parameters>
+    <frx:docgen>
+  <frx:doc type="html"/>
+  <frx:doc type="xls"/>
+</frx:docgen>
+  <frx:menu/><style/><frx:cache/><frx:description/><meta content="Payment totals for fines and fees by payment posting type. For specified date range for all library locations " name="description"/></head>
+  <body>
+
+  <div id="monthly-fine-fee-amounts_block" class="FrxTable FrxTable" frx:block="voyager-circ-finefee/monthly-fine-fee-amounts">    <h2>Fine/Fee Amounts by Payment type and Date Range</h2>
+ <p>   Payment totals for fines and fees by payment posting type. For specified date range for all library locations</p>
+    <table>
+      <thead>
+        <tr>
+          <th>location_code</th>
+          <th>location_name</th>
+          <th>total_payment_amount</th>
+          <th>cash</th>
+          <th>check</th>
+          <th>voucher</th>
+          <th>credit_card</th>
+          <th>panther_funds</th>
+          <th>bankruptcy</th>
+          <th>other</th>
+          <th>forgive_amount</th>
+          <th>error_amount</th>
+          <th>refund_amount</th>
+          <th>busar_amount</th>
+          <th>total_amount</th>
+          <th>total_trans</th></tr></thead>
+      <tbody>
+        <tr id="monthly-fine-fee-amounts" frx:foreach="*">
+          <td>{location_code}</td>
+          <td>{location_name}</td>
+          <td>{total_payment_amount}</td>
+          <td>{cash}</td>
+          <td>{check}</td>
+          <td>{voucher}</td>
+          <td>{credit_card}</td>
+          <td>{panther_funds}</td>
+          <td>{bankruptcy}</td>
+          <td>{other}</td>
+          <td>{forgive_amount}</td>
+          <td>{error_amount}</td>
+          <td>{refund_amount}</td>
+          <td>{busar_amount}</td>
+          <td>{total_amount}</td>
+          <td>{total_trans}</td></tr></tbody></table></div></body>
+</html>

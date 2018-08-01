@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Acquisition Profiles</title>
+    <frx:category>Voyager - Profiles - Acquisitions</frx:category>
+    <frx:options/>
+    <frx:fields/>
+    <frx:parameters/>
+    <frx:docgen>
+  <frx:doc type="csv"/>
+  <frx:doc type="html"/>
+  <frx:doc type="doc"/>
+  <frx:doc type="xls"/>
+  <frx:doc type="xml"/>
+</frx:docgen>
+  <frx:menu type="normal-item"/><style>table {&#13;
+                font-family: verdana,arial,sans-serif;&#13;
+                font-size:11px;&#13;
+                color:#333333;&#13;
+                border-width: 1px;&#13;
+                border-color: #666666;&#13;
+                border-collapse: collapse;&#13;
+}&#13;
+th {&#13;
+                border-width: 1px;&#13;
+                padding: 8px;&#13;
+                border-style: solid;&#13;
+                border-color: #666666;&#13;
+                background-color: #cecece;&#13;
+}&#13;
+td {&#13;
+                border-width: 1px;&#13;
+                padding: 8px;&#13;
+                border-style: solid;&#13;
+                border-color: #666666;&#13;
+                background-color: #ffffff;&#13;
+}&#13;
+&#13;
+tr.odd td {&#13;
+        background-color: #eeeeee;&#13;
+}&#13;
+&#13;
+tr.even td {&#13;
+}&#13;
+&#13;
+</style><frx:description/><meta content="A list of Acquisition/Serials Profiles, Operators and associated permission settings. These settings can be found in the Voyager System Administration client under Security - Acquisition/Serials Profiles." name="description"/></head>
+  <body>
+  <div id="acquisitions-profiles_block" class="FrxTable" frx:block="voyager-prod/acquisitions-profiles">
+  <p>A list of Acquisition/Serials Profiles, Operators and associated permission settings.  These settings can be found in the Voyager System Administration client under Security - Acquisition/Serials Profiles.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Profile Name</th>
+          <th>Operator First Name</th>
+          <th>Operator Last Name</th>
+          <th>Operator ID</th>
+          <th>PO - Add/Update Purchase Orders</th>
+          <th>PO - Receive</th>
+          <th>PO - Delete Purchase Orders</th>
+          <th>PO - View-Only Purchase Orders</th>
+          <th>PO - Approve Purchase Orders</th>
+          <th>Serials - Serials Checkin</th>
+          <th>Serials - View-Only Serials Checkin</th>
+          <th>Serial Patterns - Add/Update</th>
+          <th>Serial Patterns - View-Only</th>
+          <th>Serial Patterns - Delete</th>
+          <th>Items - Add/Update</th>
+          <th>Items - Delete</th>
+          <th>Items - View-Only</th>
+          <th>Claims - Process Claims from Acquisitions</th>
+          <th>Claims - Process Claims from Serials Control</th>
+          <th>Claims - View-Only Problems and Claims Lists</th>
+          <th>Change Line Item Bib Record</th>
+          <th>Attach Holdings to any Bibliographic Record</th>
+          <th>Vendors - Add/Update</th>
+          <th>Vendors - Delete</th>
+          <th>Vendors - View-Only</th>
+          <th>Ledger and Funds - Add Update </th>
+          <th>Ledger and Funds - View-Only</th>
+          <th>Ledger and Funds - Delete</th>
+          <th>Ledger and Funds - Change Fund Allocations</th>
+          <th>Fiscal Close Operations</th>
+          <th>Currency Maintenance</th>
+          <th>EDI - EDI Incoming</th>
+          <th>EDI - EDI Outgoing</th>
+          <th>EDI - Modify EDI Outgoing Messages</th>
+          <th>Invoices - Add/Update</th>
+          <th>Invoices - View-Only</th>
+          <th>Invoices - Delete</th>
+          <th>Invoices - Approve</th>
+          <th>Bindery - View Volume and Issue</th>
+          <th>Bindery - Edit Volume Level Data</th>
+          <th>Bindery - Edit issue sequence for volumes</th>
+          <th>Bindery - Print</th>
+          <th>Override Overexpend Warning</th>
+          <th>Override Overcommit Warning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="acquisitions-profiles" frx:foreach="*">
+          <td style="white-space:nowrap">{acq_profile_name}</td>
+          <td style="white-space:nowrap">{first_name}</td>
+          <td style="white-space:nowrap">{last_name}</td>
+          <td style="text-align:center">{operator_id}</td>
+          <td style="text-align:center">{order_add_update}</td>
+          <td style="text-align:center">{receive}</td>
+          <td style="text-align:center">{order_delete}</td>
+          <td style="text-align:center">{order_view_only}</td>
+          <td style="text-align:center">{order_approve}</td>
+          <td style="text-align:center">{serial_checkin}</td>
+          <td style="text-align:center">{serials_view_only}</td>
+          <td style="text-align:center">{pattern_add_update}</td>
+          <td style="text-align:center">{pattern_view_only}</td>
+          <td style="text-align:center">{pattern_delete}</td>
+          <td style="text-align:center">{item_add_update}</td>
+          <td style="text-align:center">{item_delete}</td>
+          <td style="text-align:center">{item_view_only}</td>
+          <td style="text-align:center">{mono_claims}</td>
+          <td style="text-align:center">{serial_claims}</td>
+          <td style="text-align:center">{problems_claims_view_only}</td>
+          <td style="text-align:center">{change_line_item_bib}</td>
+          <td style="text-align:center">{hold_ignore_ownership}</td>
+          <td style="text-align:center">{vendor_add_update}</td>
+          <td style="text-align:center">{vendor_delete}</td>
+          <td style="text-align:center">{vendor_view_only}</td>
+          <td style="text-align:center">{ledger_add_update}</td>
+          <td style="text-align:center">{ledger_view_only}</td>
+          <td style="text-align:center">{ledger_delete}</td>
+          <td style="text-align:center">{change_fund_alloc}</td>
+          <td style="text-align:center">{fiscal_close}</td>
+          <td style="text-align:center">{currency_maintenance}</td>
+          <td style="text-align:center">{edi_incoming}</td>
+          <td style="text-align:center">{edi_outgoing}</td>
+          <td style="text-align:center">{modify_edi_outgoing}</td>
+          <td style="text-align:center">{invoice_add_update}</td>
+          <td style="text-align:center">{invoice_view_only}</td>
+          <td style="text-align:center">{invoice_delete}</td>
+          <td style="text-align:center">{invoice_approve}</td>
+          <td style="text-align:center">{bind_view_vol_issue}</td>
+          <td style="text-align:center">{bind_edit_vol}</td>
+          <td style="text-align:center">{bind_edit_issue}</td>
+          <td style="text-align:center">{bind_print}</td>
+          <td style="text-align:center">{override_expend}</td>
+          <td style="text-align:center">{override_commit}</td>
+         </tr>
+      </tbody>
+     </table>
+   </div>
+</body>
+</html>

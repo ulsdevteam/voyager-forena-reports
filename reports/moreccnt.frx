@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Record Counts by specified Date Range</title>
+<meta content="Voyager Record Counts by Owning Library Note: Remaining Semester at Sea records are suppressed but could not be deleted" name="description"/>
+<frx:category>Voyager - General Reports</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="startdate"/>
+  <frx:parm id="enddate"/>
+
+
+
+
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+</head>
+<body>
+<div id="moreccnt_bibs_block" class="FrxTable" frx:block="voyager-circ-trans/moreccnt_bibs">
+    <table>
+      <thead>
+        <tr>
+          <th>rowtype</th>
+          <th>bradford</th>
+          <th>greensburg</th>
+          <th>hsls</th>
+          <th>johnstown</th>
+          <th>law</th>
+          <th>titusville</th>
+          <th>uls</th>
+          <th>semestersea</th></tr></thead>
+      <tbody>
+        <tr id="moreccnt_bibs" frx:foreach="*">
+          <td>{rowtype}</td>
+          <td>{bradford}</td>
+          <td>{greensburg}</td>
+          <td>{hsls}</td>
+          <td>{johnstown}</td>
+          <td>{law}</td>
+          <td>{titusville}</td>
+          <td>{uls}</td>
+          <td>{semestersea}</td></tr></tbody></table></div><div id="moreccnt_Suppmfhds_block" class="FrxTable" frx:block="voyager-circ-trans/moreccnt_Suppmfhds">
+    <table>
+      <thead>
+        <tr>
+          <th>bradford</th>
+          <th>greensburg</th>
+          <th>hsls</th>
+          <th>johnstown</th>
+          <th>law</th>
+          <th>titus</th>
+          <th>uls</th>
+          <th>ssea</th></tr></thead>
+      <tbody>
+        <tr id="moreccnt_Suppmfhds" frx:foreach="*">
+          <td>{bradford}</td>
+          <td>{greensburg}</td>
+          <td>{hsls}</td>
+          <td>{johnstown}</td>
+          <td>{law}</td>
+          <td>{titus}</td>
+          <td>{uls}</td>
+          <td>{ssea}</td></tr></tbody></table></div></body>
+</html>

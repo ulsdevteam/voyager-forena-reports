@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Journal Usage Study</title>
+<frx:category>Voyager - Assessment and External Reporting</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="begin_date" label="Begin Date" require="1" type="date_popup"/>
+  <frx:parm id="end_date" label="End Date" require="1" type="date_popup"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/><meta content="Report of &amp;quot;Get It&amp;quot; (Callslip) requests for Serials, processed by the LCSU.  This report is intended for a yearlong study, starting May 2017." name="description"/></head>
+<body>
+<div id="journal-usage-study_block" class="FrxTable" frx:block="voyager-statistics/journal-usage-study"><p>Report of serials Get It (Callslip) requests sent to Storage: Filled, Expired, or Marked "No Fill" with reasons including "Link Sent", "Incomplete", "Online", and "Not Found".</p>
+<p>Title and Item information is as-of the report runtime.  Patron and status information is as of Date Processed.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>call slip id</th>
+          <th>date processed</th>
+          <th>title brief</th>
+          <th>item enum</th>
+          <th>chron</th>
+          <th>patron group name</th>
+          <th>reason code</th>
+          <th>status desc</th></tr></thead>
+      <tbody>
+        <tr id="journal-usage-study" frx:foreach="*">
+          <td>{call_slip_id}</td>
+          <td>{date_processed}</td>
+          <td>{title_brief}</td>
+          <td>{item_enum}</td>
+          <td>{chron}</td>
+          <td>{patron_group_name}</td>
+          <td>{reason_code}</td>
+          <td>{status_desc}</td></tr></tbody></table></div></body>
+</html>

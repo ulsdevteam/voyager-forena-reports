@@ -1,0 +1,11 @@
+--ACCESS=access content
+select 
+	(fft.trans_amount/100) "trans_amount"
+from   
+	pittdb.fine_fee_transactions fft,
+       	pittdb.fine_fee ff
+where 
+	fft.trans_location = :circ_location
+and   	to_char(fft.trans_date, 'YYYY/MM/DD') between :begin_date and :end_date
+and   	fft.fine_fee_id = ff.fine_fee_id
+and   	ff.fine_fee_type = :fine_fee_type

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Usage report for ULS temporary guest computer account password</title>
+<meta content="Review number of times guest computer accounts were requested to assess peak days/times and need for additional assignments" name="description"/>
+<frx:category>PittAuth</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="begin_date" label="Begin Date" type="date_popup"/>
+  <frx:parm id="end_date" label="End Date" type="date_popup"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+</head>
+<body>
+<div id="assignments_block" class="FrxTable" frx:block="pittauth/assignments">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Last Name</th>
+          <th>First Name</th>
+          <th>ID Type</th>
+          <th>Note</th>
+          <th>Account Type</th></tr></thead>
+      <tbody>
+        <tr id="assignments" frx:foreach="*">
+          <td>{log_date}</td>
+          <td>{log_time}</td>
+          <td>{lname}</td>
+          <td>{fname}</td>
+          <td>{id_type}</td>
+          <td>{note}</td>
+          <td>{account}</td></tr></tbody></table></div></body>
+</html>

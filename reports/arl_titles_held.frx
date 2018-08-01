@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>ARL Titles Held</title>
+<meta content="ARL Statistics Questionnaire, Question 1: Titles Held" name="description"/>
+<frx:category>Voyager - Assessment and External Reporting</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="FY_YEAR" label="Fiscal Year" require="1" desc="e.g. &quot;2018&quot; for July 2017 to June 2018" type="textfield"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+
+  <frx:field id="count" format="number" format-string=",."/>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/></head>
+<body>
+<div id="arl-titles-held_block" class="FrxTable" frx:block="voyager-statistics/arl-titles-held">
+<p><b>Survey Instructions:</b> Report all the instances of titles managed and maintained by the library including cataloged, locally digitized, and licensed resources.</p>
+<ul>
+<li>Fiscal Year is assumed to end June 30 at midnight.</li>
+<li>Unowned PDA/DDA items are excluded by the locations "webdda" and "wpicwebb".</li>
+<li>Items not considered to be part of the general collection are excluded by item types of "HL ER", "Misc Tech", containing "Equip", (equipment) or "PALCI" or "ILL" (other institution's collections).</li>
+</ul>
+<p>This report is based a snapshot of primarily bibliographic records, with additional information drawn from bibliographic history (for determining suppressed/unsuppressed status) and associated items (for excluding by item type and location).  While it should be able to be run for arbitrary fiscal year, some drift will occur if BIBs are deleted, or if items change over time with respect to the locations and item types mentioned.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Count</th>
+          <th>Library</th></tr></thead>
+      <tbody>
+        <tr id="arl-titles-held" frx:foreach="*">
+          <td>{count}</td>
+          <td>{library}</td></tr></tbody></table></div></body>
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Fine/Fee - Transactions By Date</title>
+    <frx:category>Voyager - Circulation</frx:category>
+    <frx:options/>
+    <frx:fields>
+  <frx:field id="trans_date"/>
+  <frx:field id="trans_amount" format="currency"/>
+  <frx:field id="transaction_desc"/>
+  <frx:field id="method_desc"/>
+  <frx:field id="location_name"/>
+  <frx:field id="e" link="e" format="e" format-string="e" target="e" rel="e" class="e" add-query="e">e</frx:field>
+</frx:fields>
+    <frx:parameters>
+  <frx:parm id="begin_date" require="1" type="date_popup"/>
+  <frx:parm id="end_date" require="1" type="date_popup"/>
+</frx:parameters>
+    <frx:docgen>
+  <frx:doc type="web"/>
+  <frx:doc type="html"/>
+  <frx:doc type="doc"/>
+  <frx:doc type="xls"/>
+</frx:docgen>
+  <frx:menu/><style/><frx:cache/><frx:description/><meta content="Report showing transaction payment method totals for all libraries for a specified date range." name="description"/></head>
+  <body>
+
+  <div id="circmenu-transactions-begin-end_block" class="FrxTable" frx:block="voyager-circ-finefee/circmenu-transactions-begin-end">
+    <table>
+      <thead>
+        <tr>
+          <th>trans date</th>
+          <th>trans amount</th>
+          <th>transaction desc</th>
+          <th>method desc</th>
+          <th>location name</th></tr></thead>
+      <tbody>
+        <tr id="circmenu-transactions-begin-end" frx:foreach="*">
+          <td>{trans_date}</td>
+          <td>{trans_amount}</td>
+          <td>{transaction_desc}</td>
+          <td>{method_desc}</td>
+          <td>{location_name}</td></tr></tbody></table></div></body>
+</html>

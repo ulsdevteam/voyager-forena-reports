@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Patron Fees by Patron Group</title>
+<frx:category>Voyager - Circulation</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="patrongroup" data_source="voyager-prod/lookup-voyager-patron-group" type="select"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/><meta content="Report showing the outstanding balance (all fine and fee types) on patron Voyager accounts listed by patron ID, patron group, first and last name, total fees due. " name="description"/></head>
+<body>
+<div id="patron_group_info_block" class="FrxTable" frx:block="voyager-circ-finefee/patron_group_info">
+<p>Report showing the outstanding balance (all fine and fee types) on patron Voyager accounts listed by patron ID, patron group, first and last name, total fees due.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Patron ID</th>
+          <th>Patron Group Code</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Total Fees Due</th></tr></thead>
+      <tbody>
+        <tr id="patron_group_info" frx:foreach="*">
+          <td>{patron_id}</td>
+          <td>{patron_group_code}</td>
+          <td>{first_name}</td>
+          <td>{last_name}</td>
+          <td>{total_fees_due}</td></tr></tbody></table></div></body>
+</html>

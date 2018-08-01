@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Charges per Patron Group, Item Type and Perm Locations</title>
+    <frx:category>Voyager - Circulation</frx:category>
+    <frx:options/>
+    <frx:fields>
+  <frx:field id="totals"/>
+
+</frx:fields>
+    <frx:parameters>
+  <frx:parm id="circ_loc" label="Circulation Location" require="1" data_source="voyager-prod/lookup-voyager-circ-locations" type="select"/>
+  <frx:parm id="transdate_start" label="Starting Date" require="1" type="date_popup"/>
+  <frx:parm id="transdate_end" label="Ending Date" require="1" type="date_popup"/>
+</frx:parameters>
+    <frx:docgen/>
+  <frx:menu/><frx:cache/><frx:description/><meta content="Three tables showing total number of charges (check-outs) by: Item type, Permanent  Location, Patron Groups for date range specified." name="description"/><style/></head>
+  <body>
+
+  <div id="circmenu7-item_type-cd_block" class="FrxTable" frx:block="voyager-circ-trans/circmenu7-item_type-cd">
+<p>Three tables showing total number of charges (check-outs) by: Item type, Permanent  Location, Patron Groups for date range specified.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>item type code</th>
+          <th>totals</th>
+          <th>location</th></tr></thead>
+      <tbody>
+        <tr id="circmenu7-item_type-cd" frx:foreach="*">
+          <td>{item_type_code}</td>
+          <td>{totals}</td>
+          <td>{location}</td></tr></tbody></table></div><div id="circmenu7-permloc_block" class="FrxTable" frx:block="voyager-circ-trans/circmenu7-permloc">
+    <table>
+      <thead>
+        <tr>
+          <th>perm location</th>
+          <th>totals</th>
+          <th>location</th></tr></thead>
+      <tbody>
+        <tr id="circmenu7-permloc" frx:foreach="*">
+          <td>{perm_location}</td>
+          <td>{totals}</td>
+          <td>{location}</td></tr></tbody></table></div><div id="circmenu7-patrongrp_block" class="FrxTable" frx:block="voyager-circ-trans/circmenu7-patrongrp">
+    <table>
+      <thead>
+        <tr>
+          <th>patron group</th>
+          <th>totals</th>
+          <th>location</th></tr></thead>
+      <tbody>
+        <tr id="circmenu7-patrongrp" frx:foreach="*">
+          <td>{patron_group}</td>
+          <td>{totals}</td>
+          <td>{location}</td></tr></tbody></table></div></body>
+</html>

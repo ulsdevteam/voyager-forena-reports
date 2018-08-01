@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Fine/Fee - Amounts per fine/fee posting type (Month/FY)</title>
+<frx:category>Voyager - Circulation</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="circ_location" require="1" data_source="voyager-prod/lookup-voyager-circ-locations" type="select"/>
+  <frx:parm id="begin_date" require="1" type="date_popup"/>
+  <frx:parm id="end_date" require="1" type="date_popup"/>
+  <frx:parm id="fine_fee_type" require="1" data_source="voyager-prod/lookup-voyager-fine-fee-types" type="select"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+
+  <frx:field id="trans_amount" format-string="currency"/>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/><meta content="Payment details for fines and fees with columns noting location of posting, amount, posting type, item barcode, by month or fiscal year (FY)" name="description"/></head>
+<body>
+<div id="circmenu-amounts-per-fine-fee-reason_block" class="FrxTable" frx:block="voyager-circ-finefee/circmenu-amounts-per-fine-fee-reason">
+    <table>
+      <thead>
+        <tr>
+          <th>loc code</th>
+          <th>trans amount</th>
+          <th>transaction desc</th></tr></thead>
+      <tbody>
+        <tr id="circmenu-amounts-per-fine-fee-reason" frx:foreach="*">
+          <td>{loc_code}</td>
+          <td>{trans_amount}</td>
+          <td>{transaction_desc}</td></tr></tbody></table></div></body>
+</html>

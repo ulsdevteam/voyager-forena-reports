@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Record Identifiers for GDC</title>
+<frx:category>Voyager - Cataloging</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="recordsetid" label="Record Set" data_source="voyager-prod/lookups/gdc-recordset-by-user" type="select"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/><meta content="Lists BIB, MFHD, and ITEM information for each record in a BIB or MFHD Global Data Change recordset, if available.  No results will be returned for AUTH-based recordsets." name="description"/></head>
+<body>
+<div id="gdc-recordset-to-items_block" class="FrxTable FrxTable" frx:block="voyager-metadata/gdc-recordset-to-items">Bibliographic, Holding, Item, and Barcode identifiers associated with a GDC BIB or MHFD recordset.
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Bib ID</th>
+          <th>Bib Suppressed</th>
+          <th>MHFD ID</th>
+          <th>MFHD Suppressed</th>
+          <th>MFHD Location</th>
+          <th>Item ID</th>
+          <th>Item Location</th>
+          <th>Last Item status</th>
+          <th>Item Barcode</th>
+          <th>Barcode status</th></tr></thead>
+      <tbody>
+        <tr id="gdc-recordset-to-items" frx:foreach="*">
+          <td>{bib_id}</td>
+          <td>{bib_suppressed}</td>
+          <td>{mfhd_id}</td>
+          <td>{mfhd_suppressed}</td>
+          <td>{mfhd_location}</td>
+          <td>{item_id}</td>
+          <td>{item_location}</td>
+          <td>{last_item_status}</td>
+          <td>{item_barcode}</td>
+          <td>{barcode_status}</td></tr></tbody></table></div></body>
+</html>

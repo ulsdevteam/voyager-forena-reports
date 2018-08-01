@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>High Bay Item Count</title>
+<frx:category>Voyager - General Reports</frx:category>
+<frx:options/>
+<frx:parameters>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/><meta content="The Total below is a count of all items with a spine label in the format of 'R-M-S-T' including suppressed items.&#13;&#10;This by the definition is a count of all items in the High Bay. If an item has a spine label that matches the 'R-M-S-T' that is in another physical location it will be counted as being in the High Bay." name="description"/></head>
+<body>
+
+The Total below is a count of all items with a spine label in the format of 'R-M-S-T' including suppressed items.<br/>
+This by the definition is a count of all items in the High Bay. If an item has a spine label that matches the 'R-M-S-T' that is in another physical location it will be counted as being in the High Bay.
+
+<div id="highbay-item-count_block" class="FrxTable" frx:block="voyager-prod/highbay-item-count">
+    <table>
+      <thead>
+        <tr>
+          <th>Total</th></tr></thead>
+      <tbody>
+        <tr id="highbay-item-count" frx:foreach="*">
+          <td>{total}</td></tr></tbody></table></div></body>
+</html>

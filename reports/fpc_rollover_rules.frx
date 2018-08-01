@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>FPC Rollrules Report</title>
+<meta content="FPC Rollover Rules/Fiscal Periods/Ledgers" name="description"/>
+<frx:category>Voyager - Acquisitions</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="fiscal_period" label="Fiscal Period Name" require="1" data_source="voyager-prod/lookup-fiscal-period" type="select"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/></head>
+<body>
+<div id="fpc-rollover-rules_block" class="FrxTable" frx:block="voyager-acquisitions/fpc-rollover-rules">
+<p>FPC Rollover Rules/Fiscal Periods/Ledgers</p>
+    <table>
+      <thead>
+        <tr>
+          <th>rule id</th>
+          <th>rule name</th>
+          <th>fiscal period id</th>
+          <th>fiscal period name</th>
+          <th>new fiscal period name</th>
+          <th>ledger id</th>
+          <th>ledger name</th></tr></thead>
+      <tbody>
+        <tr id="fpc-rollover-rules" frx:foreach="*">
+          <td>{rule_id}</td>
+          <td>{rule_name}</td>
+          <td>{fiscal_period_id}</td>
+          <td>{fiscal_period_name}</td>
+          <td>{new_fiscal_period_name}</td>
+          <td>{ledger_id}</td>
+          <td>{ledger_name}</td></tr></tbody></table></div></body>
+</html>

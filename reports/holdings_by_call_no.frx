@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Holdings by Call Number Prefix</title>
+<frx:category>Voyager - Assessment and External Reporting</frx:category>
+<frx:options/>
+<frx:parameters>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/><meta content="Count of unsuppressed holdings by LC call number prefix, held within the ULS and Regional Libraries, aged over the prior three fiscal years.  This report is intended to parallel the Circulation Charges Report." name="description"/></head>
+<body>
+<div id="holdings-by-call-no_block" class="FrxTable" frx:block="voyager-statistics/holdings-by-call-no">Count of unsuppressed holdings by LC call number prefix, held within the ULS and Regional Libraries.  Select A/V Material is designated as such, other items without an LC call number are marked "Unclassified".  Historic numbers represent the counts of current items which were present as of prior fiscal years (July - June).
+    <table>
+      <thead>
+        <tr>
+          <th>Call Number Prefix</th>
+          <th>Current Count</th>
+          <th>Last Fiscal Year</th>
+          <th>Two FYs Old</th>
+          <th>Three FYs Old</th></tr></thead>
+      <tbody>
+        <tr id="holdings-by-call-no" frx:foreach="*">
+          <td>{call_no_prefix}</td>
+          <td>{current_count}</td>
+          <td>{year_old}</td>
+          <td>{two_year_old}</td>
+          <td>{three_year_old}</td></tr></tbody></table></div></body>
+</html>

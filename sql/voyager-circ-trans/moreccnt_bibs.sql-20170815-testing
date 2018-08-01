@@ -1,0 +1,27 @@
+--ACCESS=access content
+select 
+        'Total Bibs',
+	count(case when library_id = '1' then library_id end) Bradford,
+	count(case when library_id = '5' then library_id end) Greensburg,
+	count(case when library_id = '10' then library_id end) TotBibHSLS,
+	count(case when library_id = '6' then library_id end) TotBibJohn,
+	count(case when library_id = '7' then library_id end) TotBibLaw,
+	count(case when library_id = '9' then library_id end) TotBibTitus,
+	count(case when library_id = '2' then library_id end) TotBibULS,
+	count(case when library_id = '8' then library_id end) TotBibssea
+	from pittdb.bib_master
+        where create_date between :startdate and :enddate+1
+union
+select
+                'Suppressed Bibs', 
+                count(case when library_id = '1' and suppress_in_opac = 'Y' then library_id end) Bradford,
+                count(case when library_id = '5' and suppress_in_opac = 'Y' then library_id end) Greensburg,
+                count(case when library_id = '10' and suppress_in_opac = 'Y' then library_id end) SuppBIB_HSLS,
+                count(case when library_id = '6' and suppress_in_opac = 'Y' then library_id end) SuppBIB_Johnstown,
+                count(case when library_id = '7' and suppress_in_opac = 'Y' then library_id end) SuppBIB_Law,
+                count(case when library_id = '9' and suppress_in_opac = 'Y' then library_id end) SuppBIB_Titusville,
+                count(case when library_id = '2' and suppress_in_opac = 'Y' then library_id end) SuppBIB_ULS,
+                count(case when library_id = '8' and suppress_in_opac = 'Y' then library_id end) SuppBIB_SSEA
+        from 
+                pittdb.bib_master
+        where create_date between :startdate and :enddate+1

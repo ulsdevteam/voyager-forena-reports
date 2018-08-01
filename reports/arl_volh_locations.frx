@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>ARL Volume Locations</title>
+<meta content="Lists locations and whether they are flagged for inclusion in the ARL Volumes Held report." name="description"/>
+<frx:category>Voyager - Assessment and External Reporting</frx:category>
+<frx:options/>
+<frx:parameters>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/></head>
+<body>
+<p>
+All Voyager locations, order by Library System, showing whether the location is included for counting in the ARL Volumes Held report, both generally and as an ebook location.
+</p>
+<div id="arl-volh-locations_block" class="FrxTable" frx:block="voyager-statistics/arl-volh-locations">
+    <table>
+      <thead>
+        <tr>
+          <th>Location Code</th>
+          <th>Location Name</th>
+          <th>Location Display Name</th>
+          <th>Include in Volumes Held Count</th>
+          <th>Include in EBook Count</th>
+          <th>Library</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="arl-volh-locations" frx:foreach="*">
+          <td>{location_code}</td>
+          <td>{location_name}</td>
+          <td>{location_display_name}</td>
+          <td>{arlvolh}</td>
+          <td>{arleb}</td>
+          <td>{library}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Circulation Charges by LC Class and Item Type by Fiscal Year</title>
+    <frx:category>Voyager - Assessment and External Reporting</frx:category>
+    <frx:options/>
+    <frx:fields>
+  <frx:field id="lc_class"/>
+  <frx:field id="fiscal_year"/>
+  <frx:field id="total_charges"/>
+  <frx:field id="e" link="e" format="e" format-string="e" target="e" rel="e" class="e" add-query="e">e</frx:field>
+</frx:fields>
+    <frx:parameters>
+  <frx:parm id="fiscal_year" label="Fiscal Year" require="1" desc="Select the Fiscal Year from the drop down list." data_source="voyager-prod/lookups/fiscal_periods" data_field="fiscal_year" label_field="fiscal_name" type="select"/>
+  <frx:parm id="item_type_code" label="Item Type" require="1" desc="Select one or more Item Types from the list above." data_source="voyager-prod/lookups/item_type_code" data_field="item_type_code" label_field="item_type_display" type="multiselect"/>
+</frx:parameters>
+    <frx:docgen>
+  <frx:doc type="csv"/>
+  <frx:doc type="html"/>
+  <frx:doc type="doc"/>
+  <frx:doc type="xls"/>
+</frx:docgen>
+  <frx:menu/><style>table {&#13;
+	font-family: verdana,arial,sans-serif;&#13;
+	font-size:11px;&#13;
+	color:#333333;&#13;
+	border-width: 1px;&#13;
+	border-color: #666666;&#13;
+	border-collapse: collapse;&#13;
+}&#13;
+th {&#13;
+	border-width: 1px;&#13;
+	padding: 8px;&#13;
+	border-style: solid;&#13;
+	border-color: #666666;&#13;
+	background-color: #cecece;&#13;
+}&#13;
+td {&#13;
+	border-width: 1px;&#13;
+	padding: 8px;&#13;
+	border-style: solid;&#13;
+	border-color: #666666;&#13;
+	background-color: #ffffff;&#13;
+}&#13;
+&#13;
+tr.odd td {&#13;
+        background-color: #eeeeee;&#13;
+}&#13;
+&#13;
+tr.even td {&#13;
+}</style><frx:cache/></head>
+  <body>
+
+  <div id="circulation-by-lc-class_block" class="FrxTable" frx:block="voyager-prod/circulation-by-lc-class">
+    <table>
+      <thead>
+        <tr>
+          <th>LC Class</th>
+          <th>Fiscal Year</th>
+          <th>Total Charges</th></tr></thead>
+      <tbody>
+        <tr id="circulation-by-lc-class" frx:foreach="*">
+          <td>{lc_class}</td>
+          <td>{fiscal_year}</td>
+          <td>{total_charges}</td></tr></tbody></table></div></body>
+</html>

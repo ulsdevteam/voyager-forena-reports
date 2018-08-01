@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+  <head>
+    <title>Fine/Fee - Transaction Amount Totals by Circulation Location and Date Range</title>
+    <frx:category>Voyager - Circulation</frx:category>
+    <frx:options/>
+    <frx:fields>
+  <frx:field id="test0"/>
+  <frx:field id="test1" format="currency"/>
+  <frx:field id="test2" format="currency"/>
+  <frx:field id="e" link="e" format="e" format-string="e" target="e" rel="e" class="e" add-query="e">e</frx:field>
+</frx:fields>
+    <frx:parameters>
+  <frx:parm id="circ_location" label="Circulation Location" require="1" data_source="voyager-prod/lookup-voyager-circ-locations" type="select"/>
+  <frx:parm id="startdate" label="Starting Date" require="1" type="date_popup"/>
+  <frx:parm id="enddate" label="Ending Date" require="1" type="date_popup"/>
+</frx:parameters>
+    <frx:docgen>
+  <frx:doc type="email"/>
+  <frx:doc type="html"/>
+  <frx:doc type="xls"/>
+</frx:docgen>
+  <frx:menu/><style/><frx:cache/><frx:description/><meta content="Report showing transaction payment method totals for specific libraries for specified date range." name="description"/></head>
+  <body>
+
+  
+
+  <div id="circmenu_2_pt1_block" class="FrxTable FrxTable" frx:block="voyager-circ-finefee/circmenu_2_pt1">    
+ 
+<p>Report showing transaction payment method totals for specific libraries for specified date range.</p>   
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Transaction Method</th>
+          <th>Amount</th></tr></thead>
+      <tbody>
+        <tr id="circmenu_2_pt1" frx:foreach="*">
+          <td>{transaction method}</td>
+          <td>{amount}</td></tr></tbody></table></div><div id="circmenu_2_pt2_block" class="FrxTable FrxTable" frx:block="voyager-circ-finefee/circmenu_2_pt2">    
+    
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Transaction Type</th>
+          <th>Amount</th></tr></thead>
+      <tbody>
+        <tr id="circmenu_2_pt2" frx:foreach="*">
+          <td>{transaction type}</td>
+          <td>{amount}</td></tr></tbody></table></div></body>
+</html>

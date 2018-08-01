@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>ARL Volumes Held</title>
+<meta content="ARL Statistics Questionnaire, Questions 2 and 4: Volumes Held and E-Books" name="description"/>
+<frx:category>Voyager - Assessment and External Reporting</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="FY_YEAR" label="Fiscal Year" desc="e.g. &quot;2018&quot; for July 2017 to June 2018" type="textfield"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+
+  <frx:field id="count" format="number" format-string=",."/>
+
+</frx:fields>
+<frx:menu/>
+<frx:cache duration="+30 minutes"/>
+<style/>
+<frx:description/></head>
+<body>
+<div id="arl-volumes-held_block" class="FrxTable" frx:block="voyager-statistics/arl-volumes-held">
+<p>Survey Instructions: Use the ANSI / NISO Z39.7-2004 definition for volumes.  Include duplicates and bound volumes of periodicals.  Exclude microforms, maps, nonprint materials, and uncataloged items.  Exclude electronic serials.  Include government documents.  Include owned e-book units.</p>
+<p><b>Note:</b> This reports only itemized (barcoded) records and e-book holdings from Voyager.  <b>Non-barcoded items will need to be manually added to these totals, where applicable.</b></p>
+<ul>
+<li>Fiscal Year is assumed to end June 30 at midnight.</li>
+<li>Only items within MFHD locations as selected by the ARLVOLH flag are considered.</li>
+<li>Ebooks are considered to be holdings without item records in locations selected by the ARLEB flag.</li>
+<li>Unowned PDA/DDA items are excluded by the locations "webdda" and "wpicwebb".</li>
+<li>Items not considered to be part of the general collection are excluded by item types of "HL ER", "Misc Tech", containing "Equip", (equipment) or "PALCI" or "ILL" (other institution's collections).</li>
+<li>Microforms and Maps are excluded via the MARC bibliographic format and 008 field.</li>
+<li>Nonprint items are excluded by MARC bibliographic format.</li>
+<li>For location "lawnet" only bibliographic formats of "am" are considered, because this location includes both ebooks and eserials.</li>
+</ul>
+<p>This report is based a snapshot of bibliographic records, holdings, and items, with additional information drawn from bibliographic and holding history (for determining suppressed/unsuppressed status). While it should be able to be run for arbitrary fiscal year, drift will occur if BIBs, MFHDs, or items are deleted, or if items change over time with respect to the locations and item types mentioned.  This report depends on accurate designation of relevant locations, and this list is not versioned over time.  See the <a href="/lms/reports/arl_volh_locations">ARL Volumes Locations report</a> for the current list.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Count</th>
+          <th>E-Books</th>
+          <th>Library</th></tr></thead>
+      <tbody>
+        <tr id="arl-volumes-held" frx:foreach="*">
+          <td>{count}</td>
+          <td>{arleb}</td>
+          <td>{library}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
