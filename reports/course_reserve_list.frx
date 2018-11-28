@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Course Reserve List</title>
+<meta content="Report showing course reserve list for specified location, course or instructor for the effective date with all items on the list and number of times items were checked out during the effective date range." name="description"/>
+<frx:category>Voyager - Circulation</frx:category>
+<frx:options/>
+<frx:parameters>
+  <frx:parm id="effect_date" label="Effective Date" type="date_popup"/>
+  <frx:parm id="location" label="Reserve Location" data_source="voyager-prod/lookup-voyager-reserve-locations" type="select"/>
+  <frx:parm id="course" label="Course Number" type="textfield"/>
+  <frx:parm id="instructor" label="Instructor Name" data_source="voyager-prod/lookup-voyager-instructors" data_field="instructor_id" label_field="fullname" type="select"/>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/></head>
+<body>
+<div id="circmenu14_block" class="FrxTable" frx:block="voyager-circ-trans/circmenu14">
+    <table>
+<p>Report showing course reserve list for specified location, course or instructor for the effective date with all items on the list and number of times items were checked out during the effective date range.</p>
+      <thead>
+        <tr>
+          <th>item id</th>
+          <th>last name</th>
+          <th>first name</th>
+          <th>course name</th>
+          <th>course number</th>
+          <th>list title</th>
+          <th>effect date</th>
+          <th>expire date</th>
+          <th>title brief</th>
+          <th>item barcode</th>
+          <th>Transaction Count</th></tr></thead>
+      <tbody>
+        <tr id="circmenu14" frx:foreach="*">
+          <td>{item_id}</td>
+          <td>{last_name}</td>
+          <td>{first_name}</td>
+          <td>{course_name}</td>
+          <td>{course_number}</td>
+          <td>{list_title}</td>
+          <td>{effect_date}</td>
+          <td>{expire_date}</td>
+          <td>{title_brief}</td>
+          <td>{item_barcode}</td>
+          <td>{trans}</td></tr></tbody></table></div></body>
+</html>
