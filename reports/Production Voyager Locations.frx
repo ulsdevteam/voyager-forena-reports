@@ -54,20 +54,100 @@ tr.even td {&#13;
  <p>A list of all Voyager Production locations with associated OPAC display, suppressed status, and MFHD count.</p> 
 <p>In Production 10/10/2017. Description defined 10/10/2017</p>
 
-  <div id="voyager-locations_block" class="FrxTable" frx:block="voyager-prod/voyager-locations">
+  <div id="voyager-locations-voylocs_block" class="FrxTable" frx:block="voyager-prod/voyager-locations-voylocs">
     <table>
       <thead>
         <tr>
-          <th>Location Code</th>
-          <th>Location Name</th>
-          <th>Location Display_name</th>
-          <th>Suppress in OPAC</th>
-          <th>MFHD count</th></tr></thead>
+          <th>location code</th>
+          <th>location name</th>
+          <th>location display name</th>
+          <th>suppress in opac</th>
+          <th>mfhd count</th>
+          <th>note</th>
+          <th>libname1</th>
+          <th>libid</th>
+          <th>collection</th>
+          <th>hillman</th>
+          <th>happ</th>
+          <th>illloan</th>
+          <th>rapidill</th>
+          <th>rapidillbranch</th>
+          <th>rapidillpriority</th>
+          <th>rapidchapters</th>
+          <th>rapidchaptersbranch</th>
+          <th>rapidchapterspriority</th>
+          <th>hathispm</th>
+          <th>summonpp</th>
+          <th>abeloc</th>
+          <th>sslvpn</th>
+          <th>cntype</th>
+          <th>ddbok</th>
+          <th>ddbh</th>
+          <th>ddjok</th>
+          <th>nbexc</th>
+          <th>nbgov</th>
+          <th>nbea</th>
+          <th>arlvolh</th>
+          <th>arlpp</th>
+          <th>arlmf</th>
+          <th>arlcf</th>
+          <th>arlma</th>
+          <th>arlgr</th>
+          <th>arlau</th>
+          <th>arlvi</th>
+          <th>arler</th>
+          <th>arleb</th>
+          <th>arller</th>
+          <th>arlvola</th>
+          <th>createdby</th>
+          <th>createdate</th>
+          <th>modifiedby</th>
+          <th>moddate</th></tr></thead>
       <tbody>
-        <tr id="voyager-locations" frx:foreach="*">
+        <tr id="voyager-locations-voylocs" frx:foreach="*">
           <td>{location_code}</td>
           <td>{location_name}</td>
           <td>{location_display_name}</td>
           <td>{suppress_in_opac}</td>
-          <td>{mfhd_count}</td></tr></tbody></table></div></body>
+          <td>{mfhd_count}</td>
+          <td>{note}</td>
+          <td>{libname1}</td>
+          <td>{libid}</td>
+          <td>{collection}</td>
+          <td>{hillman}</td>
+          <td>{happ}</td>
+          <td>{illloan}</td>
+          <td>{rapidill}</td>
+          <td>{rapidillbranch}</td>
+          <td>{rapidillpriority}</td>
+          <td>{rapidchapters}</td>
+          <td>{rapidchaptersbranch}</td>
+          <td>{rapidchapterspriority}</td>
+          <td>{hathispm}</td>
+          <td>{summonpp}</td>
+          <td>{abeloc}</td>
+          <td>{sslvpn}</td>
+          <td>{cntype}</td>
+          <td>{ddbok}</td>
+          <td>{ddbh}</td>
+          <td>{ddjok}</td>
+          <td>{nbexc}</td>
+          <td>{nbgov}</td>
+          <td>{nbea}</td>
+          <td>{arlvolh}</td>
+          <td>{arlpp}</td>
+          <td>{arlmf}</td>
+          <td>{arlcf}</td>
+          <td>{arlma}</td>
+          <td>{arlgr}</td>
+          <td>{arlau}</td>
+          <td>{arlvi}</td>
+          <td>{arler}</td>
+          <td>{arleb}</td>
+          <td>{arller}</td>
+          <td>{arlvola}</td>
+          <td>{createdby}</td>
+          <td>{createdate}</td>
+          <td>{modifiedby}</td>
+          <td>{moddate}</td></tr></tbody></table></div></body>
 </html>
