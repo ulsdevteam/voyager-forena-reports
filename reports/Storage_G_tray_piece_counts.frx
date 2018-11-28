@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY nbsp "&#160;">
+]>
+<html xmlns:frx="urn:FrxReports">
+<head>
+<title>Storage G-tray, piece counts</title>
+<meta content="List of G-trays which have spine labels in Voyager with R-M-S-T format, including piece count when available." name="description"/>
+<frx:category>Voyager - General Reports</frx:category>
+<frx:options/>
+<frx:parameters>
+</frx:parameters>
+<frx:docgen>
+</frx:docgen>
+<frx:fields>
+</frx:fields>
+<frx:menu/>
+<frx:cache/>
+<style/>
+<frx:description/></head>
+<body>
+<div id="storage-g-tray-piece-count_block" class="FrxTable" frx:block="voyager-statistics/storage-g-tray-piece-count">
+    <table>
+<p>List of G-trays which have spine labels in Voyager with R-M-S-T format, including piece count when available.</p>
+      <thead>
+        <tr>
+          <th>tray</th>
+          <th>traysize</th>
+          <th>pieces</th>
+          <th>count</th></tr></thead>
+      <tbody>
+        <tr id="storage-g-tray-piece-count" frx:foreach="*">
+          <td>{tray}</td>
+          <td>{traysize}</td>
+          <td>{pieces}</td>
+          <td>{count}</td></tr></tbody></table></div></body>
+</html>
