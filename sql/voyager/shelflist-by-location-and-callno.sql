@@ -21,28 +21,28 @@ SELECT
 	mfhd_master.mfhd_id,
 	bib_master.bib_id
 FROM
-	location CROSS JOIN
-	bib_mfhd JOIN
-	bib_master ON (bib_mfhd.bib_id = bib_master.bib_id) JOIN
-	bib_text ON (bib_mfhd.bib_id = bib_text.bib_id) JOIN
-	mfhd_master ON (bib_mfhd.mfhd_id = mfhd_master.mfhd_id) LEFT OUTER JOIN
-	(
-		mfhd_item JOIN
-		item ON (item.item_id = mfhd_item.item_id) LEFT OUTER JOIN
-		item_barcode ON (item.item_id = item_barcode.item_id) LEFT OUTER JOIN
-		location perm_location ON (item.perm_location = perm_location.location_id) LEFT OUTER JOIN
-		location temp_location ON (item.temp_location = temp_location.location_id)
-	) ON (bib_mfhd.mfhd_id = mfhd_item.mfhd_id) JOIN
-	location mfhd_location ON (mfhd_master.location_id = mfhd_location.location_id)
+	location
+	CROSS JOIN bib_mfhd
+	JOIN bib_master ON (bib_mfhd.bib_id = bib_master.bib_id)
+	JOIN bib_text ON (bib_mfhd.bib_id = bib_text.bib_id)
+	JOIN mfhd_master ON (bib_mfhd.mfhd_id = mfhd_master.mfhd_id)
+	LEFT OUTER JOIN (
+		mfhd_item
+		JOIN item ON (item.item_id = mfhd_item.item_id)
+		LEFT OUTER JOIN item_barcode ON (item.item_id = item_barcode.item_id AND item_barcode.barcode_status = 1)
+		JOIN location perm_location ON (item.perm_location = perm_location.location_id)
+		LEFT OUTER JOIN location temp_location ON (item.temp_location = temp_location.location_id)
+	) ON (bib_mfhd.mfhd_id = mfhd_item.mfhd_id)
+	JOIN location mfhd_location ON (mfhd_master.location_id = mfhd_location.location_id)
 WHERE
-	location.location_id IN :location_list AND
-	bib_master.suppress_in_opac = 'N' AND
-	mfhd_master.suppress_in_opac = 'N' AND
-	(mfhd_master.normalized_call_no BETWEEN :start_call||' ' AND :end_call||'~' OR (:include_missing_callno = '1' AND mfhd_master.normalized_call_no IS NULL)) AND
-	(
-		(mfhd_master.location_id = location.location_id AND item.item_id IS NULL) OR
-		(item.perm_location = location.location_id AND item.temp_location = 0) OR
-		item.temp_location = location.location_id
+	location.location_id IN :location_list
+	AND bib_master.suppress_in_opac = 'N'
+	AND mfhd_master.suppress_in_opac = 'N'
+	AND (mfhd_master.normalized_call_no BETWEEN :start_call||' ' AND :end_call||'~' OR (:include_missing_callno = '1' AND mfhd_master.normalized_call_no IS NULL))
+	AND (
+		(mfhd_master.location_id = location.location_id AND item.item_id IS NULL)
+		OR (item.perm_location = location.location_id AND item.temp_location = 0)
+		OR item.temp_location = location.location_id
 	)
 ORDER BY
 	mfhd_master.normalized_call_no,

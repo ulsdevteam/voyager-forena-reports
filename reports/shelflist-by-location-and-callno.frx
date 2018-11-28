@@ -48,7 +48,7 @@ tr.odd td {&#13;
 }&#13;
 &#13;
 tr.even td {&#13;
-}</style><frx:cache duration="+15 minutes"/><frx:description/><meta content="Currently used daily." name="description"/></head>
+}</style><frx:cache/><frx:description/><meta content="Currently used daily." name="description"/></head>
   <body>
 
   <div id="shelflist-by-location-and-callno_block" class="FrxTable" frx:block="voyager-prod/shelflist-by-location-and-callno">
